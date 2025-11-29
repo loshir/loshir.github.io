@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <!-- Keep a simple, correct viewport -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- If you still hit caching issues, version your static file URLs instead of meta no-cache -->
+  <title>Memory App - Messages</title>
+
+  <style id="dynamic-styles-v3">
+    :root {
+      /* Theme */
+      --bg: #f4f0e1;
+      --tazi: #dbbdc2;
+      --alexis: #86b8c5;
+      --title: #8B4D47;
+      --text-on-bubble: #fff;
+
+      /* Layout sizing */
+      --space-1: 4px;
+      --space-2: 8px;
+      --space-3: 12px;
+      --space-4: 16px;
+      --space-5: 20px;
+      --radius: 18px;
+      --radius-small: 6px;
+
+      /* Back button size scales with viewport but stays reasonable */
+      --btn-size: clamp(44px, 8vw, 60px);
+      --icon-size: calc(var(--btn-size) - 12px);
+      --content-max: 860px;
+    }
+
+    /* Reset */
+    *, *::before, *::after { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: #111;
+      line-height: 1.4;
+    }
+
+    /* Page container to keep content centered and clear of the fixed button */
+    .page {
+      min-height: 100%;
+      padding: calc(env(safe-area-inset-top) + var(--space-5)) var(--space-4) var(--space-5) var(--space-4);
+    }
+
+    .header {
+      max-width: var(--content-max);
+      margin: 0 auto var(--space-4);
+      text-align: center;
+    }
+    .memory-title {
+      color: var(--title);
+      font-weight: 600;
+      font-size: clamp(1.05rem, 2.5vw, 1.35rem);
+      margin: var(--space-3) 0 0;
+    }
+
+    /* Back button */
+    .back-button {
+      position: fixed;
+      z-index: 1000;
+      top: max(var(--space-3), calc(env(safe-area-inset-top) + var(--space-3)));
+      left: max(var(--space-3), calc(env(safe-area-inset-left) + var(--space-3)));
+      width: var(--btn-size);
+      height: var(--btn-size);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      border-radius: 12px;
+      background: transparent; /* no background so it sits over the canvas cleanly */
+      outline-offset: 2px;
+    }
+    .back-icon {
+      width: var(--icon-size);
+      height: var(--icon-size);
+      object-fit: contain; /* avoid stretching */
+      border-radius: 8px;
+      transition: transform .2s ease;
+      display: block;
+    }
+    .back-button:hover .back-icon { transform: scale(1.03); }
+    .back-text { font-size: clamp(18px, 4vw, 22px); line-height: 1; }
+
+    /* Chat layout */
+    .chat {
+      max-width: var(--content-max);
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-3);
+      padding-top: calc(var(--btn-size) + var(--space-4)); /* ensure content never hides under the button */
+    }
+
+    .message {
+      display: inline-block;
+      padding: var(--space-3) var(--space-4);
+      border-radius: var(--radius);
+      max-width: 85%;
+      width: fit-content;
+      font-size: clamp(14px, 2.4vw, 16px);
+      color: var(--text-on-bubble);
+      animation: slideIn .25s ease-out;
+      word-wrap: break-word;
+      overflow-wrap: anywhere;
+    }
+
+    /* Use a wrapper row to align left/right cleanly */
+    .row {
+      display: flex;
+      width: 100%;
+    }
+    .row.tazi  { justify-content: flex-end; }
+    .row.alexis{ justify-content: flex-start; }
+
+    .message.tazi {
+      background: var(--tazi);
+      border-bottom-left-radius: var(--radius-small);
+      margin: 2.5px;
+    }
+    .message.alexis {
+      background: var(--alexis);
+      border-bottom-right-radius: var(--radius-small);
+      margin: 2.5px;
+    }
+
+    .sender {
+      font-weight: 800;
+      font-size: clamp(10px, 2vw, 12px);
+      margin-bottom: var(--space-2);
+      color: rgba(0,0,0,.88);
+      text-transform: uppercase;
+      letter-spacing: .8px;
+    }
+    .content {
+      font-weight: 400;
+    }
+
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateY(8px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Larger screens: give bubbles a bit more width, and breathing room */
+    @media (min-width: 640px) {
+      .message { max-width: 70%; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Fixed back button with image (or fallback text) -->
+  <a href="{{ url_for('home') }}" class="back-button" aria-label="Home">
+    <img src="{{ url_for('static', filename='images/home-icon.png') }}" alt="" class="back-icon" />
+    <!-- Fallback text; remove the img above if you prefer text:
+    <span class="back-text">←</span> -->
+  </a>
+
+  <div class="page">
+    {% if memory_name %}
+      <header class="header">
+        <h3 class="memory-title">{{ memory_name }}</h3>
+      </header
+    {% endif %}
+
+    <main class="chat">
+      {% for message in messages %}
+        <!-- row chooses side; message chooses color -->
+        <div class="row {{ message.sender.lower() }}">
+          <div class="message {{ message.sender.lower() }}">
+            {% if message.show_sender %}
+              <div class="sender">{{ message.sender }}</div>
+            {% endif %}
+            <div class="content">{{ message.content }}</div>
+          </div>
+        </div>
+      {% endfor %}
+    </main>
+  </div>
+</body>
+</html>

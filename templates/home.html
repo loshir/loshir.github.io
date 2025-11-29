@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Memory App - Home</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f9f5f0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: start;
+            padding: 20px;
+            color: #4a4255;
+            overflow: hidden; /*3Prevent horizontal scroll */
+            width: 100%; /* ADD THIS */
+            max-width: 100vw; /* ADD THIS */
+            max-height: fit-content;
+            height: fit-content;
+        }
+
+        .home-container {
+            padding-top: 33%;
+            text-align: center;
+            max-width: 400px;
+            width: 98%;
+            max-height: fit-content;
+            height: fit-content;
+            /*overflow-x: hidden; /* ADD THIS */
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #4a4255; /* 60% Neutral */
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            color: #7a7288; /* 60% Neutral: Secondary text */
+            margin-bottom: 3rem;
+            line-height: 1.5;
+        }
+
+        /* 10% Primary Pink - Key interactions */
+        .random-btn {
+            background-color: #f2dede;
+            color: #4a4255; /* 60% Neutral: Light text for contrast */
+            font-size: 1.2rem;
+            font-weight: 600;
+            padding: 16px 32px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(215, 155, 190, 0.3); /* 10% Pink shadow */
+        }
+
+        .random-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(215, 155, 190, 0.4);
+            background: linear-gradient(135deg, #b88cae 0%, #d79bbe 100%); /* Swap gradient on hover */
+        }
+
+        .random-btn:active {
+            transform: translateY(0);
+        }
+
+        /* Calendar - 30% Secondary Pastels */
+        .calendar {
+            margin-top: 2rem;
+            text-align: left;
+            width: 100%;
+        }
+
+        .calendar h2 {
+            font-size: 1.5rem;
+            color: #4a4255; /* 60% Neutral */
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        .calendar h3 {
+            font-size: 0.7rem;
+            color: #7a7288; /* 60% Neutral */
+            margin-bottom: 1rem;
+            font-weight: 600;
+            text-align: center;
+            font-style: italic;
+            padding-bottom: 15px;
+        }
+
+        .calendar-week {
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            padding: 0;
+            gap: clamp(3px, 1vw, 9px); /* Responsive gap - smaller on mobile */
+        }
+
+        .calendar-day {
+            text-decoration: none;
+            background: #f2dede; /* 30% Secondary */
+            color: #4a4255; /* 60% Neutral */
+            border: none;
+            border-radius: 8px;
+            padding: clamp(6px, 2vw, 12px) clamp(5px, 2vw, 10px); /* Reduced horizontal padding */
+            cursor: pointer;
+            font-weight: 600;
+            font-size: clamp(0.75rem, 3.5vw, 1.2rem); /* Slightly smaller font range */
+            flex: 1;
+            min-width: 0; /* ADD THIS - allows flex items to shrink below content size */
+            transition: all 0.3s ease;
+            border: 1px solid #e8d5e8; /* 60% Neutral: Subtle border */
+            text-align: center; /* ADD THIS - centers the numbers */
+        }
+
+
+        /* 30% Secondary: Muted pink hover */
+        .calendar-day:hover {
+            background: #CFA2A9;
+        }
+
+        /* 10% Primary Pink: Focus outline */
+        .calendar-day:focus {
+            outline: 2px solid #d79bbe;
+            outline-offset: 2px;
+        }
+        
+        html, body {
+            overflow: hidden; /* Prevent all scrolling */
+            height: 100vh; /* Lock to viewport height */
+            width: 100vw; /* Lock to viewport width */
+        }   
+
+
+        /* Mobile responsive */
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .random-btn {
+                font-size: 1rem;
+                padding: 14px 28px;
+            }
+
+            .calendar-week {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .calendar-day {
+                margin: 2px;
+                text-decoration: none;
+            }
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div class="home-container">
+        <h1>title</h1>
+
+        <a href="{{ url_for('random_memory') }}" class="random-btn">
+            magic button
+        </a>
+
+        <div class="calendar">
+            <h2>First week!</h2>
+            <h3>Claim all the rewards for a special gift!</h3>
+            <ul class="calendar-week">
+                <li><a href="{{ url_for('days_2411')}}" class="calendar-day" data-date="2025-11-24">24</a></li>
+                <li><a class="calendar-day" data-date="2025-11-25">25</a></li>
+                <li><a class="calendar-day" data-date="2025-11-26">26</a></li>
+                <li><a href="{{ url_for('days_2711')}}" class="calendar-day" data-date="2025-11-27">27</a></li>
+                <li><a href="{{ url_for('days_2811')}}" class="calendar-day" data-date="2025-11-28">28</a></li>
+                <li><a href="{{ url_for('days_2911')}}" class="calendar-day" data-date="2025-11-29">29</a></li>
+                <li><a href="{{ url_for('home_week2') }}" class="calendar-day" data-date="2025-11-30">30</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
