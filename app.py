@@ -82,32 +82,38 @@ def memories():
 
 @app.route('/random_memory')
 def random_memory():
-    memory_name, memory_data = get_random_memory()
-    
-    # Get the messages for this memory
-    memory = TextMemory(memory_data["start"], memory_data["end"])
+    # Choose random start and end within the allowed range
+    start = random.randint(8758, 141914)
+    end = random.randint(8758, 141914)
+    if start > end:
+        start, end = end, start
+
+    memory_name = f"memory_{start}_{end}"
+
+    # Get the messages for this random memory range
+    memory = TextMemory(start, end)
     messages = memory.get_messages_for_replay()
-    
+
     if messages:
         shown_senders = set()
         processed_messages = []
-        
+
         for msg in messages:
             show_sender = msg['sender'] not in shown_senders
             if show_sender:
                 shown_senders.add(msg['sender'])
-                
+
             processed_messages.append({
                 'sender': msg['sender'],
                 'content': msg['content'],
                 'show_sender': show_sender
             })
-        
-        return render_template("memories.html", 
-                             messages=processed_messages, 
-                             memory_name=memory_name.replace('_', ' ').title(),
-                             description=memory_data.get("description", ""))
-    
+
+        return render_template("memories.html",
+                               messages=processed_messages,
+                               memory_name=memory_name.replace('_', ' ').title(),
+                               description="")
+
     return "No messages found in this memory"
 
 
