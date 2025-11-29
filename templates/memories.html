@@ -165,7 +165,10 @@
     {% if memory_name %}
       <header class="header">
         <h3 class="memory-title">{{ memory_name }}</h3>
-      </header
+        {% if memory_subtitle %}
+          <div class="memory-subtitle" style="font-size:0.95rem;color:rgba(0,0,0,0.6);margin-top:6px">{{ memory_subtitle }}</div>
+        {% endif %}
+      </header>
     {% endif %}
 
     <main class="chat">
