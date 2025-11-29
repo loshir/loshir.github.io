@@ -55,6 +55,14 @@ def days_2811():
 def days_2911():
 	return render_template("days_2911.html")
 
+@app.route('/days_3011')
+def days_3011():
+	return render_template("days_3011.html")
+
+@app.route('/special_gift')
+def special_gift():
+	return render_template("special_gift.html")
+
 @app.route('/memories')
 def memories():
     memory = TextMemory(8758, 8800)

@@ -121,8 +121,22 @@
     text-align: center;
     display: block; /* needed so text-align works properly */
 }
+.subtle {
+    font-size: 0.9rem;
+    color: #5a5563; /* optional */
+    text-align: center;
+    display: block; /* needed so text-align works properly */
+}
 
-
+        /* SPECIAL GIFT TITLE */
+        .special-title {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 600;
+            color: #8B4D47;
+            margin-bottom: 16px;
+            letter-spacing: 0.5px;
+        }
 
     </style>
 </head>
@@ -130,64 +144,55 @@
 <body>
     <div class="page">
 <img src="/static/images/home.svg" alt="home" style="width:36px;height:36px;vertical-align:middle;margin-bottom:18px;cursor:pointer;" onclick="window.location.href='{{ url_for('home') }}'"/>
-        <div class="title-image-wrapper">
-            <img src="/static/images/title_2911.png" alt="Title">
-        </div>
-
-        <p>
-        While I tend to forget a lot of days in my life, this one will always be in my memory. Very early morning for me, you allowed me to ask you to be my girlfriend.
-        </p>
-
-        <p>
-        Now, of course, this was merely a formality as we were already pretty much acting the part for the better part of the weeks prior to that. But it remains an important step.
-	An officialisation of our falling for each other.
-        </p>
-
+        <!-- Simple audio player for OnSeRetrouvera.mp3 -->
+        <h2 class="special-title">Special Gift</h2>
+        <audio controls style="width:100%;margin-bottom:18px;">
+            <source src="{{ url_for('static', filename='music/OnSeRetrouvera.mp3') }}" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <p class="subtle-italic">On se retrouvera - Francis Lalanne</p>
+        <p class="subtle">I decided to record this little song for you because I've always liked it despite it being quite maccabre. 
+            <br>I like how it expressed that their bond should be unbreakable even after death. <br>I like to think that nothing could separate us.
+            Not even that sort of fatality.</p>
         <div class="divider"></div>
+        <p class="subtle-italic">Please enjoy. <br>I know it could be better but I didn't want to lack the time to launch the app and prepare the next pages.
+        <br>Ps : Use your earphones and don't play it too loud for a better experience!</p>
 
-        <p>
-    Funnily enough, on that day, I -or we- was leaving for Italy. With you in my pocket, we discovered the creepy crib and Napoli's dirty streets.
-	Traveling this way with you gave me a preview of what it would be like to travel together physically. I discovered that we were quite similar when traveling. 
-	We don't necessarily need to be outside 24/7 to feel like the trip was worth it. There was actually this day were we didn't go out at all... I wonder what happened that day... 
-        </p>
-
-            <div class="end-gif-wrapper">
-            <img src="/static/images/kiss.gif" alt="kiss">
-            <p class="image-caption">We just couldn't keep our hands to ourselves.
-            </p>
-        </div>
-
-                <div class="divider"></div>
-
-        <p>
-    I also enjoyed our long walks through Napoli, even if you were not able to always be in pocket tazi mode because of my battery or sometimes lack of network, or simply the time difference.
-	It's quite incredible the way it feels like we were there together, merely because we were always on the phone, or texting. 
-	I sometimes stop and think about the fact that, even before we met, we were already inseparable. 
-	We just didn't want to spend time apart, and therefore, we were always in contact. I really like that about us, how we are a package deal, never one without the other. 
-	Two sides of the same coin. I'm sure we will always be like that, until we're too old to even move two feet away from each other.
-        </p>
-
-                <p>
-   I would love to go back to Italy with you, not necessarily Napoli but maybe country side and Rome because you'd like to visit artsy things there. 
-	I would love for us to walk around together there, discovering the landscape the same way we did on our first trip there. 
-	I know it's not easy for you to walk for a long time sometimes and you don't necessarily enjoy doing so, but if you let go of the fact that you're walking, I can tell you that it's quite enjoyable. 
-        </p>
-
-                <p>
-    I think on that trip, I realized that I loved walking a lot. I remember even mentionning to you that it would be fun to walk every day during a vacation going from point A to B just walking.
-	Although it sounds like a crazy plan, I still believe it would be fun and quite the experience. If one day you're down to do that, let me know petit wife!
-        </p>
-<p>
-    <span class="subtle-italic">
-        I would walk with you anywhere.<br>Until the very end of the world, until it's just you and me.
-    </span>
-</p>
-
-
-        
-
-
-
+<p class="subtle"style="white-space:pre-wrap;word-break:break-word;">
+Paroles :
+Promets-moi si tu me survis
+D'être plus forte que jamais
+Je serai toujours dans ta vie
+Près de toi, je te promets
+Et si la mort me programme
+Sur son grand ordinateur
+De ne pas en faire un drame
+De ne pas en avoir peur
+Pense à moi, comme je t'aime
+Et tu me délivreras
+Tu briseras l'anathème
+Qui me tient loin de tes bras
+Pense à moi, comme je t'aime
+Rien ne nous séparera
+Même pas les chrysanthèmes
+Tu verras, on se retrouvera
+N'oublie pas ce que je t'ai dit
+L'amour est plus fort que tout
+Ni l'enfer ni le paradis
+Ne se mettront entre nous
+Et si la mort me programme
+Sur son grand ordinateur
+Elle ne prendra que mon âme
+Mais elle n'aura pas mon cœur
+Pense à moi, comme je t'aime
+Et tu me délivreras
+Tu briseras l'anathème
+Qui me tient loin de tes bras
+Pense à moi, comme je t'aime
+Rien ne nous séparera
+Même pas les chrysanthèmes
+Tu verras, on se retrouvera
+On se retrouvera</p>
     </div>
 </body>
 </html>

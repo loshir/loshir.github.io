@@ -154,14 +154,12 @@
   </style>
 </head>
 <body>
-  <!-- Fixed back button with image (or fallback text) -->
-  <a href="{{ url_for('home') }}" class="back-button" aria-label="Home">
-    <img src="{{ url_for('static', filename='images/home-icon.png') }}" alt="" class="back-icon" />
-    <!-- Fallback text; remove the img above if you prefer text:
-    <span class="back-text">←</span> -->
-  </a>
+  <div class="page" style="max-width:780px;width:100%;background:#fff;padding:22px 18px;border-radius:16px;box-shadow:0 4px 20px rgba(0,0,0,0.05);margin:32px auto;">
+    <!-- Home button with SVG icon --><img src="/static/images/home.svg" alt="home" style="width:36px;height:36px;vertical-align:middle;margin-bottom:18px;cursor:pointer;" onclick="window.location.href='{{ url_for('home') }}'" />
+      <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#8B4D47" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle">
 
-  <div class="page">
+      </svg>
+    </a>
     {% if memory_name %}
       <header class="header">
         <h3 class="memory-title">{{ memory_name }}</h3>
