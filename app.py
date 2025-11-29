@@ -84,7 +84,7 @@ def memories():
 def random_memory():
     # Choose random start and end within the allowed range
     start = random.randint(8758, 141914)
-    end = random.randint(8758, 141914)
+    end = start + random.randint(20, 100)
     if start > end:
         start, end = end, start
 
@@ -109,9 +109,32 @@ def random_memory():
                 'show_sender': show_sender
             })
 
+        # Build human-friendly memory name and subtitle from message timestamps
+        try:
+            # Collect all datetimes from messages (expected format: YYYY-MM-DD HH:MM:SS)
+            msg_datetimes = [datetime.strptime(m['date'], "%Y-%m-%d %H:%M:%S") for m in messages if 'date' in m]
+            if msg_datetimes:
+                first_dt = min(msg_datetimes)
+                last_dt = max(msg_datetimes)
+                # If all messages share the same date, use that date as the memory name
+                if first_dt.date() == last_dt.date():
+                    memory_name_display = first_dt.date().isoformat()
+                    memory_subtitle = f"{first_dt.strftime('%H:%M:%S')} - {last_dt.strftime('%H:%M:%S')}"
+                else:
+                    memory_name_display = f"{first_dt.date().isoformat()} — {last_dt.date().isoformat()}"
+                    memory_subtitle = f"{first_dt.strftime('%Y-%m-%d %H:%M:%S')} — {last_dt.strftime('%Y-%m-%d %H:%M:%S')}"
+            else:
+                # Fallback if no date fields present
+                memory_name_display = memory_name.replace('_', ' ').title()
+                memory_subtitle = ""
+        except Exception:
+            memory_name_display = memory_name.replace('_', ' ').title()
+            memory_subtitle = ""
+
         return render_template("memories.html",
                                messages=processed_messages,
-                               memory_name=memory_name.replace('_', ' ').title(),
+                               memory_name=memory_name_display,
+                               memory_subtitle=memory_subtitle,
                                description="")
 
     return "No messages found in this memory"
