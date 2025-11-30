@@ -58,6 +58,7 @@
             color: #4a4255; /* 60% Neutral: Light text for contrast */
             font-size: 1.2rem;
             font-weight: 600;
+            margin-top: 40px;
             padding: 16px 32px;
             border: none;
             border-radius: 25px;
@@ -167,19 +168,28 @@
                 margin: 2px;
                 text-decoration: none;
             }
+            .image-caption {
+            font-style: italic;
+            font-size: 0.85rem;
+            color: #6a6473;
+            text-align: center;
+            margin-bottom: 60px;
         }
+        }
+        
 
 
 
     </style>
 </head>
 <body>
+    
     <div class="home-container">
-        <h1>title</h1>
+        <img src="/static/images/Go_back.png" alt="home" style="width:72px;height:72px;vertical-align:left;cursor:pointer;border-radius: 12px;" onclick="window.location.href='{{ url_for('home') }}'"/>
+        <p class="image-caption">Wanna go back ?</p>
 
-        <a href="{{ url_for('random_memory') }}" class="random-btn">
-            magic button
-        </a>
+
+
 
         <div class="calendar">
             <h2>Second week!</h2>
@@ -191,9 +201,13 @@
                 <li><a class="calendar-day" data-date="2025-12-04">04</a></li>
                 <li><a class="calendar-day" data-date="2025-12-05">05</a></li>
                 <li><a class="calendar-day" data-date="2025-12-06">06</a></li>
-                <li><a href="{{ url_for('home_week3') }}" class="calendar-day" data-date="2025-12-07">07</a></li>
+                <li><a class="calendar-day" data-date="2025-12-07">07</a></li>
             </ul>
         </div>
+
+                <a href="{{ url_for('random_memory') }}" class="random-btn">
+            magic button
+        </a>
     </div>
 </body>
 </html>
