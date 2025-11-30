@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>Memory App - Home</title>
+
+    <style>
+        /* RESET */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* PAGE BASE */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #faf7f3;
+            color: #3e3a45;
+            display: flex;
+            justify-content: center;
+            padding: 18px 10px; /* reduced margin */
+        }
+
+        /* MAIN CONTAINER */
+        .page {
+            max-width: 780px; /* wider than before */
+            width: 100%;
+            background: #ffffff;
+            padding: 22px 18px; /* slightly tighter */
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            line-height: 1.6;
+        }
+
+        p {
+            margin-bottom: 18px;
+            font-size: 1.03rem;
+        }
+
+        strong {
+            font-weight: 600;
+            color: #2d2640;
+        }
+
+        /* SUBTLE DIVIDER */
+        .divider {
+            width: 100%;
+            height: 1px;
+            background: #eee;
+            margin: 26px 0;
+        }
+
+        /* IMAGE BLOCK */
+        .image-wrapper {
+            width: 100%;
+            margin: 14px 0 18px 0; /* more compact */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .image-wrapper img {
+            width: 100%;
+            height: auto;
+            border-radius: 14px;
+            object-fit: cover;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+        }
+
+        .image-caption {
+            margin-top: 10px;
+            font-style: italic;
+            font-size: 0.85rem;
+            color: #6a6473;
+            text-align: center;
+        }
+
+        /* TITLE IMAGE */
+        .title-image-wrapper {
+            width: 100%;
+            margin: 0 0 18px 0; /* slightly reduced */
+            display: flex;
+            justify-content: center;
+        }
+
+        .title-image-wrapper img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+
+        .end-gif-wrapper {
+            margin-top: 10px;
+            width: 100%;
+            display: flex;
+            flex-direction: column; /* stack vertically */
+            align-items: center;    /* center both image + caption */
+        }
+
+        .end-gif-wrapper img {
+            width: 50%;
+            height: auto;
+            border-radius: 14px;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+        }
+
+        .end-gif-wrapper .image-caption {
+            margin-top: 10px;
+            font-style: italic;
+            font-size: 0.85rem;
+            color: #6a6473;
+            text-align: center;
+        }
+.subtle-italic {
+    font-style: italic;
+    font-size: 0.9rem;
+    color: #5a5563; /* optional */
+    text-align: center;
+    display: block; /* needed so text-align works properly */
+}
+
+
+
+    </style>
+</head>
+
+<body>
+    <div class="page">
+                <img src="/static/images/home.svg" alt="home" style="width:56px;height:56px;vertical-align:middle;margin-bottom:18px;cursor:pointer;" onclick="window.location.href='{{ url_for('home_week2') }}'"/>
+        <div class="title-image-wrapper">
+            <img src="/static/images/title_0112.png" alt="Title">
+        </div>
+
+        <p>
+    J'ai décidé d'écrire en français. Et je sais que tu vas me dire "Mais, mon amour, tu aurais pu écrire en français tous les jours en fait!!". 
+	J'ai cependant envie que cela reste spécial dans ce petit projet que j'ai pour toi. C'est parfois plus facile d'écrire en français, parfois en anglais. 
+	Alors tu auras d'autres jours en français, ne t'inquiète pas.
+        </p>
+
+        <p>
+Aujourd'hui, je n'ai rien de spécial à raconter, il faut bien laisser quelques trucs pour les prochains jours.
+Je voulais donc en profiter pour te dire ce que je ressens depuis mon retour en France.
+        </p>
+
+        <div class="divider"></div>
+
+        <p>
+Les jours me paraîssent longs et j'ai beaucoup de mal à me repérer dans le temps. Je n'arrive bien souvent pas à savoir quelle heure il est, si je suis censé
+prendre le petit déjeuner ou le dîner. C'est difficile parce que je m'endors à des heures improbables et je n'ai pas l'impression de pouvoir accomplir quoique ce soit.
+       </p>
+
+        <p>
+    Sans toi, la vie n'a que peu d'intérêt. C'est comme si j'étais forcé de regarder un film sans les couleurs et le son. Comme si on me disait de cuisiner sans ajouter de sel.
+	Les moments les plus difficiles sont ceux où je me rends compte que tu n'es pas là alors que je m'apprêtais à te préparer ton thé ou que je suis en train de cuisiner et que j'ai 
+	soudain envie de venir te voir dans la chambre. Mais tu n'es pas là. 
+	A chaque fois, ça me fait un pincement au coeur. Un rappel brutal de la situation. 
+        </p>
+        <div class="divider"></div>
+        <p>
+Je me rassure en me disant que tu seras bientôt de retour et que, même si les jours sont longs, le temps passse quand même assez vite. Nous sommes déjà en décembre et à la fin du mois 
+tu seras de retour. 
+J'ai hâte de te retrouver ici, mon amour. J'ai hâte de partager le lit avec toi à nouveau et de pouvoir reprendre nos petites habitudes. 
+        </p>
+
+                <div class="end-gif-wrapper">
+            <img src="/static/images/gomamiss.png" alt="goma">
+            <p class="image-caption">Tu es toujours dans mes pensées.
+            </p>
+        </div>
+    <span class="subtle-italic">
+        Tu es le centre de mon monde. Je t'aime plus que tu ne le sais. Plus qu'il est possible de l'écrire.
+    </span>
+</p>
+
+
+        
+
+
+
+    </div>
+</body>
+</html>
