@@ -154,11 +154,10 @@
   </style>
 </head>
 <body>
-  <div class="page" style="max-width:780px;width:100%;background:#fff;padding:22px 18px;border-radius:16px;box-shadow:0 4px 20px rgba(0,0,0,0.05);margin:32px auto;">
-    <!-- Home button with SVG icon --><img src="/static/images/home.svg" alt="home" style="width:36px;height:36px;vertical-align:middle;margin-bottom:18px;cursor:pointer;" onclick="window.location.href='{{ url_for('home') }}'" />
-      <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#8B4D47" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle">
-
-      </svg>
+  <div class="page">
+    <!-- Home button with SVG icon (uses static/home.svg if present) -->
+    <a href="{{ url_for('home') }}" aria-label="Home" style="display:inline-block;margin-bottom:18px;">
+      <img src="{{ url_for('static', filename='images/home.svg') }}" alt="home" style="width:36px;height:36px;vertical-align:middle;cursor:pointer;" />
     </a>
     {% if memory_name %}
       <header class="header">
