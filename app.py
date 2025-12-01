@@ -16,16 +16,8 @@ def get_current_week_days():
 
 @app.route('/home')
 def home():
-    now = datetime.now()
-    month = now.month
-    day = now.day
-    
-    if month == 11 and 24 <= day <= 30:
         return render_template('home.html')
-    elif month == 12 and 1 <= day <= 7:
-        return render_template('home_week2.html')
-    else:
-        return render_template('home.html')
+
 
 @app.route('/home_week2')
 def home_week2():
