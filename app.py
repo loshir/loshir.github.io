@@ -63,6 +63,20 @@ def days_3011():
 def days_0112():
 	return render_template("days_0112.html")
 
+@app.route('/days_0212')
+def days_0212():
+    return render_template("days_0212.html")
+
+@app.route('/days_0312')
+def days_0312():          
+    return render_template("days_0312.html")
+@app.route('/days_0412')
+def days_0412():          
+    return render_template("days_0412.html")
+@app.route('/days_0512')
+def days_0512():
+    return render_template("days_0512.html")
+
 @app.route('/special_gift')
 def special_gift():
 	return render_template("special_gift.html")
