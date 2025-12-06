@@ -1,0 +1,195 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>Memory App - Home</title>
+
+    <style>
+        /* RESET */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* PAGE BASE */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #faf7f3;
+            color: #3e3a45;
+            display: flex;
+            justify-content: center;
+            padding: 18px 10px; /* reduced margin */
+        }
+
+        /* MAIN CONTAINER */
+        .page {
+            max-width: 780px; /* wider than before */
+            width: 100%;
+            background: #ffffff;
+            padding: 22px 18px; /* slightly tighter */
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            line-height: 1.6;
+        }
+
+        p {
+            margin-bottom: 18px;
+            font-size: 1.03rem;
+        }
+
+        strong {
+            font-weight: 600;
+            color: #2d2640;
+        }
+
+        /* SUBTLE DIVIDER */
+        .divider {
+            width: 100%;
+            height: 1px;
+            background: #eee;
+            margin: 26px 0;
+        }
+
+        /* IMAGE BLOCK */
+        .image-wrapper {
+            width: 100%;
+            margin: 14px 0 18px 0; /* more compact */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .image-wrapper img {
+            width: 100%;
+            height: auto;
+            border-radius: 14px;
+            object-fit: cover;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+        }
+
+        .image-caption {
+            margin-top: 10px;
+            font-style: italic;
+            font-size: 0.85rem;
+            color: #6a6473;
+            text-align: center;
+        }
+
+        /* TITLE IMAGE */
+        .title-image-wrapper {
+            width: 100%;
+            margin: 0 0 18px 0; /* slightly reduced */
+            display: flex;
+            justify-content: center;
+        }
+
+        .title-image-wrapper img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+
+        .end-gif-wrapper {
+            margin-top: 10px;
+            width: 100%;
+            display: flex;
+            flex-direction: column; /* stack vertically */
+            align-items: center;    /* center both image + caption */
+        }
+
+        .end-gif-wrapper img {
+            width: 50%;
+            height: auto;
+            border-radius: 14px;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+        }
+
+        .end-gif-wrapper .image-caption {
+            margin-top: 10px;
+            font-style: italic;
+            font-size: 0.85rem;
+            color: #6a6473;
+            text-align: center;
+        }
+.subtle-italic {
+    font-style: italic;
+    font-size: 0.9rem;
+    color: #5a5563; /* optional */
+    text-align: center;
+    display: block; /* needed so text-align works properly */
+}
+
+
+
+    </style>
+</head>
+
+<body>
+    <div class="page">
+                <img src="/static/images/home.svg" alt="home" style="width:56px;height:56px;vertical-align:middle;margin-bottom:18px;cursor:pointer;" onclick="window.location.href='{{ url_for('home_week2') }}'"/>
+        <div class="title-image-wrapper">
+            <img src="/static/images/title_0712.png" alt="Title">
+        </div>
+
+<p>
+I wanted to finish the week by talking about the day we first met.
+</p>
+
+<p>
+Firstly, I'd like for us to remember how unlikely and unexpected it was for us to meet that early. I remember us talking about meeting sometime in january 2023 if I can take days off to come to the philippines. I didn't imagine it would be possible for us to already meet in July. Now, while I can't remember the exact date, I remember exactly how it felt preparing everything for you. 
+	I wanted everything to be perfect, and so, I bought a new matress, new pillows, new sheets... I just wanted for you to really sleep in a new bed, not something that was already shared with someone else, it felt dirty. I remember trying to speed up the process of finishing up the place to welcome you. Also, trying to make sure everything was spotless as I knew you wouldn't have liked for your new home to be dirty. 
+</p>
+
+<div class="divider"></div>
+
+<p>	
+    I remember when we were taling to each other while you were on you way in. I remember the excitment and stress ramping up a little. I wouldn't say that I was anxious, but definitely stressed/excited as I knew something big was about to happen, should it be negative or immensly positive as it turned out to be. I don't know if you'll relate, but I somehow feel whenever a big moment is about to happen for me. Now, of course, for our first meeting, it was pretty clear that something important was at play, but I mean, in general, I sort of sense these things. And it really translates into this thing in my stomach, adrenaline squeezing it in as I feel every second more intensly than the previous one. During these times, everything is enhanced. Joy, fear, laughter, feelings get progressively more intense. And on that day, it didn't stop growing even when I was already driving to fetch you in Dusseldorf. 
+	I remember how cute it was that your family requested that I sent a picture of myself going to fetch you, as if they just wanted confirmation that I was indeed on my way and not standing you up.
+</p>
+
+
+
+<p>
+I honesly barely remember the drive. I'd probably best describe it as me spacing out for the entire drive. 
+	When I finally arrived at the airport though and I was finally waiting for you, knowing that any minute you'd be appearing for the first time in my sight. I kept playing the scene in my head. "Oh here she comes..." I kept thinking. I kept imagining that you were the next person to show up. And then finally, you surprised me by attacking me from the back and all of that nut twisting enhanced feelings vanished. 
+</p>
+
+<div class="end-gif-wrapper">
+    <img src="/static/images/flowers.jpg" alt="flowers">
+    <p class="image-caption"> This is probably how we looked when I gave you the flowers when meeting you for the first time.
+    </p>
+</div>
+
+<p>
+	I can say with full confidence that this was the most natural, effortless, encounter one could ever dream of. Intantly, our personality matched and we were just like on the phone. Two sides of the same coin. We quickly reached the car and drove home, for the first time. I remember how we couldn't keep our hands to ourselves during the drive. Even getting people behind us to honk because we were french kissing instead of moving forward. Two love birds, united for the first time.
+</p>
+
+<p>	When we finally arrived home, I am still surprised, to this day, about how natural it was for us to start being intimate. We just went to the shower together and climbed upstairs to be able to feel each other's touch for the first time. 
+	I must say that, above everything, I am still amazed to see how easy it was for us to just be together. I would have accepted as normal some awkwardness, some hesitation here and there. But none of that. Right away, we were Lexi and Tazi, each other's best friends. Nothing less.</p>
+        <div class="divider"></div>
+                 <div class="end-gif-wrapper">
+            <img src="/static/images/ride.jpg" alt="ride">
+            <p class="image-caption">And there we were, riding home together for the first time...
+            </p>
+
+        </div>
+</p>
+
+<p>
+    <span class="subtle-italic">
+        You have completed this week's calendar!<br><a href="{{ url_for('special_gift2') }}">Redeem your special gift</a>
+    </span>
+</p>
+
+
+        
+
+
+
+    </div>
+</body>
+</html>

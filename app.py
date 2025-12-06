@@ -73,9 +73,95 @@ def days_0512():
 def days_0612():
     return render_template("days_0612.html")
 
+@app.route('/days_0712')
+def days_0712():
+    return render_template("days_0712.html")
+
+@app.route('/days_0812')
+def days_0812():
+    return render_template("days_0812.html")
+
+@app.route('/days_0912')
+def days_0912():      
+    return render_template("days_0912.html")
+
+@app.route('/days_1012')
+def days_1012():                
+    return render_template("days_1012.html")
+
+@app.route('/days_1112')
+def days_1112():                
+    return render_template("days_1112.html")
+@app.route('/days_1212')
+def days_1212():                
+    return render_template("days_1212.html")
+@app.route('/days_1312')
+def days_1312():                
+    return render_template("days_1312.html")
+@app.route('/days_1412')
+def days_1412():                
+    return render_template("days_1412.html")
+@app.route('/days_1512')
+def days_1512():                
+    return render_template("days_1512.html")
+@app.route('/days_1612')
+def days_1612():                
+    return render_template("days_1612.html")
+@app.route('/days_1712')
+def days_1712():                
+    return render_template("days_1712.html")
+@app.route('/days_1812')
+def days_1812():                
+    return render_template("days_1812.html")
+@app.route('/days_1912')
+def days_1912():                
+    return render_template("days_1912.html")
+@app.route('/days_2012')
+def days_2012():                
+    return render_template("days_2012.html")
+@app.route('/days_2112')
+def days_2112():                
+    return render_template("days_2112.html")
+@app.route('/days_2212')
+def days_2212():                
+    return render_template("days_2212.html")
+@app.route('/days_2312')
+def days_2312():                
+    return render_template("days_2312.html")
+@app.route('/days_2412')
+def days_2412():                
+    return render_template("days_2412.html")
+@app.route('/days_2512')
+def days_2512():                
+    return render_template("days_2512.html")
+@app.route('/days_2612')
+def days_2612():                
+    return render_template("days_2612.html")
+@app.route('/days_2712')
+def days_2712():                
+    return render_template("days_2712.html")
+@app.route('/days_2812')
+def days_2812():                
+    return render_template("days_2812.html")
+@app.route('/days_2912')
+def days_2912():                
+    return render_template("days_2912.html")
+@app.route('/days_3012')
+def days_3012():                
+    return render_template("days_3012.html")
+@app.route('/days_3112')
+def days_3112():                
+    return render_template("days_3112.html")
+
+
+
 @app.route('/special_gift')
 def special_gift():
 	return render_template("special_gift.html")
+
+@app.route('/special_gift2')
+def special_gift2():
+	return render_template("special_gift2.html")
 
 @app.route('/memories')
 def memories():
