@@ -1,0 +1,183 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>Memory App - Home</title>
+
+    <style>
+        /* RESET */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* PAGE BASE */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #faf7f3;
+            color: #3e3a45;
+            display: flex;
+            justify-content: center;
+            padding: 18px 10px; /* reduced margin */
+        }
+
+        /* MAIN CONTAINER */
+        .page {
+            max-width: 780px; /* wider than before */
+            width: 100%;
+            background: #ffffff;
+            padding: 22px 18px; /* slightly tighter */
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            line-height: 1.6;
+        }
+
+        p {
+            margin-bottom: 18px;
+            font-size: 1.03rem;
+        }
+
+        strong {
+            font-weight: 600;
+            color: #2d2640;
+        }
+
+        /* SUBTLE DIVIDER */
+        .divider {
+            width: 100%;
+            height: 1px;
+            background: #eee;
+            margin: 26px 0;
+        }
+
+        /* IMAGE BLOCK */
+        .image-wrapper {
+            width: 100%;
+            margin: 14px 0 18px 0; /* more compact */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .image-wrapper img {
+            width: 100%;
+            height: auto;
+            border-radius: 14px;
+            object-fit: cover;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+        }
+
+        .image-caption {
+            margin-top: 10px;
+            font-style: italic;
+            font-size: 0.85rem;
+            color: #6a6473;
+            text-align: center;
+        }
+
+        /* TITLE IMAGE */
+        .title-image-wrapper {
+            width: 100%;
+            margin: 0 0 18px 0; /* slightly reduced */
+            display: flex;
+            justify-content: center;
+        }
+
+        .title-image-wrapper img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+
+        .end-gif-wrapper {
+            margin-top: 10px;
+            width: 100%;
+            display: flex;
+            flex-direction: column; /* stack vertically */
+            align-items: center;    /* center both image + caption */
+        }
+
+        .end-gif-wrapper img {
+            width: 50%;
+            height: auto;
+            border-radius: 14px;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+        }
+
+        .end-gif-wrapper .image-caption {
+            margin-top: 10px;
+            font-style: italic;
+            font-size: 0.85rem;
+            color: #6a6473;
+            text-align: center;
+        }
+.subtle-italic {
+    font-style: italic;
+    font-size: 0.9rem;
+    color: #5a5563; /* optional */
+    text-align: center;
+    display: block; /* needed so text-align works properly */
+}
+
+
+
+    </style>
+</head>
+
+<body>
+    <div class="page">
+                <img src="/static/images/home.svg" alt="home" style="width:56px;height:56px;vertical-align:middle;margin-bottom:18px;cursor:pointer;" onclick="window.location.href='{{ url_for('home_week3') }}'"/>
+        <div class="title-image-wrapper">
+            <img src="/static/images/title_0812.png" alt="Title">
+        </div>
+
+<p>
+	You probably noticed by now that we are sort of going in a chronological order for the different entries. So, I wanted to talk about the first weeks being together to begin this week.
+</p>
+<div class="divider"></div>
+<p>
+	It's not easy to be talking about the weeks after we met without spoiling every event I'd like to talk about in the future, but I will try my best.
+	I remember not knowing what time or even day it was in the first couple of days. We were just in the room, having lemonpie, falling asleep, waking up, talking, lemonpie,... This cycle seemed infinite. I don't even remember us cooking food during that time, we just literally just sustaining ourselves with love.
+	Thinking back, it all seems unreal even to this day. It felt like we were in a dream, we were not even using our phones almost, I remember even thinking "wow I probably should give some news to my family". We were already in our little bubble, not wanting to let the outside world interfere. 
+</p>
+
+
+<p>	
+    	I remember how easy it felt to be around you. We didn't even need to adjust from the phone calls to being physically together, it was justn like we added another layer to our relationship, not changing the scenery. I remember being struck by your loving and cuddly nature. When we were on the phone, it's not something that could easily be seen because it translates in a lot of physical touch, a lot of cuddling. 
+</p>
+
+
+
+<p>
+	I really love how natural it was for you to find your place in my arms.
+	I remember being so ennamored by how easily we would fall asleep with each other's touch. Whenever I would hold and have your head on my chest, you would fall asleep in seconds. I found that so romantic and, to this day, it is still true. You sleep best when I am holding you. 
+	They say that when you have found your person, it is natural to fall asleep around them quite easily because you feel completely safe and calm. Whenever I wouldn't be able to sleep, just holding you does the trick and puts me right back in dreamland.
+</p>
+
+
+
+<p>
+	I remember how it was to discover all your petits quirks and habits in real life too. Observing how you liked to spray everything with alcohol, how you put on your clothes. I found it so romantic to be able to discover the person I loved again, through another scope.
+	For some people, it might be challenging, maybe they'd need to adapt, but for me, I remember it just being such a romantic experience. 
+	I just loved our first weeks, for all the lemonpie and all the discoveries we made about each other.
+</p>
+
+<div class="end-gif-wrapper">
+    <img src="/static/images/cuddle.gif" alt="cuddle">
+    <p class="image-caption"> I can't wait to be wrapped in the duvet with you again my petit wife.
+    </p>
+</div>
+
+
+
+        
+
+
+
+    </div>
+</body>
+</html>

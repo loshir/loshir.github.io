@@ -38,6 +38,34 @@
             /*overflow-x: hidden; /* ADD THIS */
         }
 
+        .home-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            align-items: center;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .home-button-group {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .home-button-group img {
+            width: 72px;
+            height: 72px;
+            cursor: pointer;
+            border-radius: 12px;
+            transition: transform 0.3s ease;
+        }
+
+        .home-button-group img:hover {
+            transform: scale(1.05);
+        }
+
         h1 {
             font-size: 2.5rem;
             color: #4a4255; /* 60% Neutral */
@@ -184,8 +212,16 @@
 <body>
     <div class="home-container">
 
-        <img src="/static/images/Go_back.png" alt="home" style="width:72px;height:72px;vertical-align:left;cursor:pointer;border-radius: 12px;" onclick="window.location.href='{{ url_for('home_week2') }}'"/>
-        <p class="image-caption">Let's go to week two ?</p>
+        <div class="home-buttons">
+            <div class="home-button-group">
+                <img src="/static/images/week2.gif" alt="home" onclick="window.location.href='{{ url_for('home_week2') }}'"/>
+            </div>
+
+            <div class="home-button-group">
+                <img src="/static/images/peachboba.gif" alt="home" onclick="window.location.href='{{ url_for('home_week3') }}'"/>
+                
+            </div>
+        </div>
 
 
         <div class="calendar">
