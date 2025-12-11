@@ -163,30 +163,30 @@ def special_gift():
 def special_gift2():
 	return render_template("special_gift2.html")
 
-@app.route('/memories')
-def memories():
-    memory = TextMemory(8758, 8800)
-    messages = memory.get_messages_for_replay()
+# @app.route('/memories')
+# def memories():
+#     memory = TextMemory(8758, 8800)
+#     messages = memory.get_messages_for_replay()
 
-    if messages:
-        # Track which senders we've already shown
-        shown_senders = set()
-        processed_messages = []
+#     if messages:
+#         # Track which senders we've already shown
+#         shown_senders = set()
+#         processed_messages = []
         
-        for msg in messages:
-            show_sender = msg['sender'] not in shown_senders
-            if show_sender:
-                shown_senders.add(msg['sender'])
+#         for msg in messages:
+#             show_sender = msg['sender'] not in shown_senders
+#             if show_sender:
+#                 shown_senders.add(msg['sender'])
                 
-            processed_messages.append({
-                'sender': msg['sender'],
-                'content': msg['content'],
-                'show_sender': show_sender
-            })
+#             processed_messages.append({
+#                 'sender': msg['sender'],
+#                 'content': msg['content'],
+#                 'show_sender': show_sender
+#             })
         
-        return render_template("memories.html", messages=processed_messages)
+#         return render_template("memories.html", messages=processed_messages)
     
-    return "No messages found"
+#     return "No messages found"
 
 @app.route('/random_memory')
 def random_memory():
