@@ -1,0 +1,182 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>Memory App - Home</title>
+
+    <style>
+        /* RESET */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* PAGE BASE */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #faf7f3;
+            color: #3e3a45;
+            display: flex;
+            justify-content: center;
+            padding: 18px 10px; /* reduced margin */
+        }
+
+        /* MAIN CONTAINER */
+        .page {
+            max-width: 780px; /* wider than before */
+            width: 100%;
+            background: #ffffff;
+            padding: 22px 18px; /* slightly tighter */
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            line-height: 1.6;
+        }
+
+        p {
+            margin-bottom: 18px;
+            font-size: 1.03rem;
+        }
+
+        strong {
+            font-weight: 600;
+            color: #2d2640;
+        }
+
+        /* SUBTLE DIVIDER */
+        .divider {
+            width: 100%;
+            height: 1px;
+            background: #eee;
+            margin: 26px 0;
+        }
+
+        /* IMAGE BLOCK */
+        .image-wrapper {
+            width: 100%;
+            margin: 14px 0 18px 0; /* more compact */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .image-wrapper img {
+            width: 100%;
+            height: auto;
+            border-radius: 14px;
+            object-fit: cover;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+        }
+
+        .image-caption {
+            margin-top: 10px;
+            font-style: italic;
+            font-size: 0.85rem;
+            color: #6a6473;
+            text-align: center;
+        }
+
+        /* TITLE IMAGE */
+        .title-image-wrapper {
+            width: 100%;
+            margin: 0 0 18px 0; /* slightly reduced */
+            display: flex;
+            justify-content: center;
+        }
+
+        .title-image-wrapper img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+
+        .end-gif-wrapper {
+            margin-top: 10px;
+            width: 100%;
+            display: flex;
+            flex-direction: column; /* stack vertically */
+            align-items: center;    /* center both image + caption */
+        }
+
+        .end-gif-wrapper img {
+            width: 50%;
+            height: auto;
+            border-radius: 14px;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+        }
+
+        .end-gif-wrapper .image-caption {
+            margin-top: 10px;
+            font-style: italic;
+            font-size: 0.85rem;
+            color: #6a6473;
+            text-align: center;
+        }
+.subtle-italic {
+    font-style: italic;
+    font-size: 0.9rem;
+    color: #5a5563; /* optional */
+    text-align: center;
+    display: block; /* needed so text-align works properly */
+}
+
+
+
+    </style>
+</head>
+
+<body>
+    <div class="page">
+                <img src="/static/images/home.svg" alt="home" style="width:56px;height:56px;vertical-align:middle;margin-bottom:18px;cursor:pointer;" onclick="window.location.href='{{ url_for('home_week3') }}'"/>
+        <div class="image-wrapper">
+            <img src="/static/images/title_1112.png" alt="Title">
+        </div>
+
+<p>
+	Some say routine is a silent killer for couple. Some say, you should try to avoid doing the same things everyday.
+</p>
+		
+<div class="divider"></div>
+
+
+
+<p>	
+    	If we take their point of view, they might imagine that a life such as ours is too simple. Maybe they imagine that there is no thrill, that we might lack what they like to label as "new experiences". "On their side", it is clear that they are seaking something we're not after. 
+	And I think there lies the key to the mystery of how sweet our life is. 
+</p>
+
+
+
+<p>
+	For whatever they might feel when they are in a party, with random strangers, having drugs, alcohol or hooking up with std filled weirdos, simply pales in comparison to what I feel when I see your smile when I wake you up with kisses. 
+	They might feel excitment, fun, maybe some tingling in their stomachs but have they ever felt this rush, this sensation starting from your feet all the way to your neck. Remember when we would drive and suddenly we feel our organs when the road is in this specific curve? The feeling resembles this one, at least physically. Emotionally, it translates to this urge, this sudden duty. This smile must stay on. No matter what. As if an addict had to protect the precious stash that will keep providing him with that sensation.
+	Therefore, these people might be seaking that tingling, that fun, to compensate for what we already have - the real thing. Much like foreigners going to the grocery store and buying "Bonne Maman" confiture when we already know what Papy's tastes like. They can keep running after what they think they need. But we know better.
+</p>
+
+
+
+<p>
+And so, I cherish our simple, habit filled life. I cherish these simple moments with you because they represent the essence of what love should be. 
+	I cherish how sweet life is when you get to appreciate such small things. How my shoulders feel light when I know that, no matter what, tomorrow will still be filled with all the things that make life beautiful because you will still be here. 
+</p>
+
+
+
+<div class="end-gif-wrapper">
+    <img src="/static/images/habit.jpg" alt="cuddle">
+    <p class="image-caption"> I'm amazed at how this one looks like us. He's playing a petit game while she's drinking something sweet thinking about bags. At this point, I'll start to think they copied us to make them.
+    </p>
+</div>
+
+
+
+        
+
+
+
+    </div>
+</body>
+</html>
