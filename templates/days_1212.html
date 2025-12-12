@@ -1,0 +1,188 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>Memory App - Home</title>
+
+    <style>
+        /* RESET */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* PAGE BASE */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #faf7f3;
+            color: #3e3a45;
+            display: flex;
+            justify-content: center;
+            padding: 18px 10px; /* reduced margin */
+        }
+
+        /* MAIN CONTAINER */
+        .page {
+            max-width: 780px; /* wider than before */
+            width: 100%;
+            background: #ffffff;
+            padding: 22px 18px; /* slightly tighter */
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            line-height: 1.6;
+        }
+
+        p {
+            margin-bottom: 18px;
+            font-size: 1.03rem;
+        }
+
+        strong {
+            font-weight: 600;
+            color: #2d2640;
+        }
+
+        /* SUBTLE DIVIDER */
+        .divider {
+            width: 100%;
+            height: 1px;
+            background: #eee;
+            margin: 26px 0;
+        }
+
+        /* IMAGE BLOCK */
+        .image-wrapper {
+            width: 100%;
+            margin: 14px 0 18px 0; /* more compact */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .image-wrapper img {
+            width: 100%;
+            height: auto;
+            border-radius: 14px;
+            object-fit: cover;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+        }
+
+        .image-caption {
+            margin-top: 10px;
+            font-style: italic;
+            font-size: 0.85rem;
+            color: #6a6473;
+            text-align: center;
+        }
+
+        /* TITLE IMAGE */
+        .title-image-wrapper {
+            width: 100%;
+            margin: 0 0 18px 0; /* slightly reduced */
+            display: flex;
+            justify-content: center;
+        }
+
+        .title-image-wrapper img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+
+        .end-gif-wrapper {
+            margin-top: 10px;
+            width: 100%;
+            display: flex;
+            flex-direction: column; /* stack vertically */
+            align-items: center;    /* center both image + caption */
+        }
+
+        .end-gif-wrapper img {
+            width: 50%;
+            height: auto;
+            border-radius: 14px;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+        }
+
+        .end-gif-wrapper .image-caption {
+            margin-top: 10px;
+            font-style: italic;
+            font-size: 0.85rem;
+            color: #6a6473;
+            text-align: center;
+        }
+.subtle-italic {
+    font-style: italic;
+    font-size: 0.9rem;
+    color: #5a5563; /* optional */
+    text-align: center;
+    display: block; /* needed so text-align works properly */
+}
+
+
+
+    </style>
+</head>
+
+<body>
+    <div class="page">
+                <img src="/static/images/home.svg" alt="home" style="width:56px;height:56px;vertical-align:middle;margin-bottom:18px;cursor:pointer;" onclick="window.location.href='{{ url_for('home_week3') }}'"/>
+        <div class="image-wrapper">
+            <img src="/static/images/title_1212.png" alt="Title">
+        </div>
+
+<p>
+	Today I feel like writing about how I feel. It has been more than two weeks since I've been back en France.
+</p>
+		
+<div class="divider"></div>
+
+
+
+<p>	
+    	It seems like this time, that sad feeling that I couldn't really pinpoint in the old house in Hazi is back sooner than before. It's been days that I've felt like I am lacking something. 
+	I think after some more time reflecting on the feeling, I have finally found to what it can relate to. It strongly reminds me of the time when I had this "gap year" when I was sort-of depressed.
+	It is extremely similar to that in the sense that, just like it was back then, I just don't feel like doing anything at all. Nothing seems to bring me joy except when I get to text you.
+	I don't want you to worry though, I am not depressed but I'm just saying that the "lack of something" feeling reminds me of that time. 
+</p>
+
+
+
+<p>
+	Somehow, it sort of is a harsh, in you face, way to be reminded of how important you are to me. Similar to how drug addicts get into a shock phase in the first days of withdrawl. 
+	I can't even pinpoint why exactly is it that it's so different with you being there instead of here but, maybe because we spent so long together physically, I don't really know how it works when we're online.
+	I remember when we had just met, or even the first time you had to go back, we didn't have trouble going back to calling. But it seems like, this time, it is much harder to transition from physically being together to having to call to be able to spend time together.
+	Therefore, it makes it so hard to be able to cope with the feeling of missing you. Because calling doesn't do the trick. It's like a kid finding out that Santa is just his dad or uncle dressed up as Santa. It's not fooling you.
+	I would admit though, that it feels good when we get to talk longer about things or when I get to hear you laugh. But I want to apologize if I'm not always fully myself when we're on the call, I'll try to not let that feeling get to me and try to just enjoy and appreciate the time we have instead of just being reminded of how I miss you.
+</p>
+
+
+
+<p>
+The hardest for me are the mornings and evenings. Déjà because you're not next to me to sleep, but also because it's moments where you have more time to reflect, think about what you miss or want. 
+	I crave to hold you in my arms, to kiss your petit cheeks. I miss the feeling of kissing that cheekbone part. I miss how comfortable it is to have your head on my chest, my arm around you. 
+	<br>I miss being able to hold you when I can't sleep. <br>
+	I miss the smell of the air coming out of your petit nose. <br> I miss my wife, so damn much. 
+</p>
+
+
+
+<div class="end-gif-wrapper">
+    <img src="/static/images/peachsad.gif" alt="cuddle">
+    <p class="image-caption"> These sad gifs of peach and goma are so cute though ahah. Look at her tapping her petit heart.
+    </p>
+</div>
+
+
+
+        
+
+
+
+    </div>
+</body>
+</html>
