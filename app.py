@@ -163,6 +163,10 @@ def special_gift():
 def special_gift2():
 	return render_template("special_gift2.html")
 
+@app.route('/special_gift3')
+def special_gift3():
+	return render_template("special_gift3.html")
+
 # @app.route('/memories')
 # def memories():
 #     memory = TextMemory(8758, 8800)

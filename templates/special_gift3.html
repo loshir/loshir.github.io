@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>Memory App - Home</title>
+
+    <style>
+        /* RESET */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* PAGE BASE */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #faf7f3;
+            color: #3e3a45;
+            display: flex;
+            justify-content: center;
+            padding: 18px 10px; /* reduced margin */
+        }
+
+        /* MAIN CONTAINER */
+        .page {
+            max-width: 780px; /* wider than before */
+            width: 100%;
+            background: #ffffff;
+            padding: 22px 18px; /* slightly tighter */
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            line-height: 1.6;
+        }
+
+        p {
+            margin-bottom: 18px;
+            font-size: 1.03rem;
+        }
+
+        strong {
+            font-weight: 600;
+            color: #2d2640;
+        }
+
+        /* SUBTLE DIVIDER */
+        .divider {
+            width: 100%;
+            height: 1px;
+            background: #eee;
+            margin: 26px 0;
+        }
+
+        /* IMAGE BLOCK */
+        .image-wrapper {
+            width: 100%;
+            margin: 14px 0 18px 0; /* more compact */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .image-wrapper img {
+            width: 100%;
+            height: auto;
+            border-radius: 14px;
+            object-fit: cover;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+        }
+
+        .image-caption {
+            margin-top: 10px;
+            font-style: italic;
+            font-size: 0.85rem;
+            color: #6a6473;
+            text-align: center;
+        }
+
+        /* TITLE IMAGE */
+        .title-image-wrapper {
+            width: 100%;
+            margin: 0 0 18px 0; /* slightly reduced */
+            display: flex;
+            justify-content: center;
+        }
+
+        .title-image-wrapper img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+
+        .end-gif-wrapper {
+            margin-top: 10px;
+            width: 100%;
+            display: flex;
+            flex-direction: column; /* stack vertically */
+            align-items: center;    /* center both image + caption */
+        }
+
+        .end-gif-wrapper img {
+            width: 50%;
+            height: auto;
+            border-radius: 14px;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+        }
+
+        .end-gif-wrapper .image-caption {
+            margin-top: 10px;
+            font-style: italic;
+            font-size: 0.85rem;
+            color: #6a6473;
+            text-align: center;
+        }
+.subtle-italic {
+    font-style: italic;
+    font-size: 0.9rem;
+    color: #5a5563; /* optional */
+    text-align: center;
+    display: block; /* needed so text-align works properly */
+}
+.subtle {
+    font-size: 0.9rem;
+    color: #5a5563; /* optional */
+    text-align: center;
+    display: block; /* needed so text-align works properly */
+}
+
+        /* SPECIAL GIFT TITLE */
+        .special-title {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 600;
+            color: #8B4D47;
+            margin-bottom: 16px;
+            letter-spacing: 0.5px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="page">
+                <img src="/static/images/home.svg" alt="home" style="width:56px;height:56px;vertical-align:middle;margin-bottom:18px;cursor:pointer;" onclick="window.location.href='{{ url_for('home') }}'"/>
+        <!-- Simple audio player for OnSeRetrouvera.mp3 -->
+        <h2 class="special-title">What if ? </h2>
+        <audio controls style="width:100%;margin-bottom:18px;">
+            <source src="{{ url_for('static', filename='music/yeux.mp3') }}" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <p class="subtle-italic">A l'encre de tes yeux - Francis Cabrel</p>
+        <p class="subtle">	And actually, I wondered what it would be like if I didn't ask you that question, or if we didn't make it to be married or even together anymore. And that's when this song comes in. If you look closely, the lyrics are probably refering to a lost love. On the second part of the song he says "Tu viendras longtemps marcher dans mes rêves. Tu viendras toujours du côté où le soleil se lève."
+	When he talks about her visiting his dreams, it's exactly how I feel it would be for me if we didn't end up together. I remember when we met and I was considering not going through with trying it out because I was scared of being hurt too much. And then I told you, I prefer to take the chance. I think it's probably because I knew that if I missed that chance, I would regret it all my life. And I would probably be haunted by the thought of you even in my dreams.
+	Then, I think it's quite a good coincidence that he talks about her coming from where the sun rises. Because it's literally where you are from for me. The sun rises in the Est and you come Est of France. 
+	<br>I really like this song a lot and it actually made me emotional when I thought about what it would be to regret not being with you.
+	<br>This is why I am so glad I made the right decision. And I'm so thankful for you deciding to give me a chance too. 
+	<br>We are such a perfect match mon amour. </p>
+        
+        <p class="subtle-italic">Hopefully you enjoy this petit song mon amour! It was quite fun to do for me!</p>
+            <div class="divider"></div>
+<p class="subtle"style="white-space:pre-wrap;word-break:break-word;">
+Paroles :
+… Puisqu'on ne vivra jamais tous les deux
+Puisqu'on est fou, puisqu'on est seul
+Puisqu'ils sont si nombreux
+Même la morale parle pour eux
+J'aimerais quand même te dire
+Tout ce que j'ai pu écrire
+Je l'ai puisé à l'encre de tes yeux
+… Je n'avais pas vu que tu portais des chaînes
+À trop vouloir te regarder
+J'en oubliais les miennes
+On rêvait de Venise et de liberté
+J'aimerais quand même te dire
+Tout ce que j'ai pu écrire
+C'est ton sourire qui me l'a dicté
+… Tu viendras longtemps marcher dans mes rêves
+Tu viendras toujours du côté où le soleil se lève
+Et si malgré ça j'arrive à t'oublier
+J'aimerais quand même te dire
+Tout ce que j'ai pu écrire
+Aura longtemps le parfum des regrets
+… Mais puisqu'on ne vivra jamais tous les deux
+Puisqu'on est fou, puisqu'on est seul
+Puisqu'ils sont si nombreux
+Même la morale parle pour eux
+J'aimerais quand même te dire
+Tout ce que j'ai pu écrire
+Je l'ai puisé à l'encre de tes yeux</p>
+    </div>
+</body>
+</html>

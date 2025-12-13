@@ -1,0 +1,182 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>Memory App - Home</title>
+
+    <style>
+        /* RESET */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* PAGE BASE */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #faf7f3;
+            color: #3e3a45;
+            display: flex;
+            justify-content: center;
+            padding: 18px 10px; /* reduced margin */
+        }
+
+        /* MAIN CONTAINER */
+        .page {
+            max-width: 780px; /* wider than before */
+            width: 100%;
+            background: #ffffff;
+            padding: 22px 18px; /* slightly tighter */
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            line-height: 1.6;
+        }
+
+        p {
+            margin-bottom: 18px;
+            font-size: 1.03rem;
+        }
+
+        strong {
+            font-weight: 600;
+            color: #2d2640;
+        }
+
+        /* SUBTLE DIVIDER */
+        .divider {
+            width: 100%;
+            height: 1px;
+            background: #eee;
+            margin: 26px 0;
+        }
+
+        /* IMAGE BLOCK */
+        .image-wrapper {
+            width: 100%;
+            margin: 14px 0 18px 0; /* more compact */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .image-wrapper img {
+            width: 100%;
+            height: auto;
+            border-radius: 14px;
+            object-fit: cover;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+        }
+
+        .image-caption {
+            margin-top: 10px;
+            font-style: italic;
+            font-size: 0.85rem;
+            color: #6a6473;
+            text-align: center;
+        }
+
+        /* TITLE IMAGE */
+        .title-image-wrapper {
+            width: 100%;
+            margin: 0 0 18px 0; /* slightly reduced */
+            display: flex;
+            justify-content: center;
+        }
+
+        .title-image-wrapper img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+
+        .end-gif-wrapper {
+            margin-top: 10px;
+            width: 100%;
+            display: flex;
+            flex-direction: column; /* stack vertically */
+            align-items: center;    /* center both image + caption */
+        }
+
+        .end-gif-wrapper img {
+            width: 50%;
+            height: auto;
+            border-radius: 14px;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+        }
+
+        .end-gif-wrapper .image-caption {
+            margin-top: 10px;
+            font-style: italic;
+            font-size: 0.85rem;
+            color: #6a6473;
+            text-align: center;
+        }
+.subtle-italic {
+    font-style: italic;
+    font-size: 0.9rem;
+    color: #5a5563; /* optional */
+    text-align: center;
+    display: block; /* needed so text-align works properly */
+}
+
+
+
+    </style>
+</head>
+
+<body>
+    <div class="page">
+                <img src="/static/images/home.svg" alt="home" style="width:56px;height:56px;vertical-align:middle;margin-bottom:18px;cursor:pointer;" onclick="window.location.href='{{ url_for('home_week3') }}'"/>
+        <div class="image-wrapper">
+            <img src="/static/images/title_1412.png" alt="Title">
+        </div>
+
+<p>
+	Well, if we continue chronologically, another major event we lived was the proposal.
+</p>
+		
+<div class="divider"></div>
+
+
+<p>
+	We talked about how a lot of guys are waiting to have an expensive diamond ring or reunite everything they think they need to propose and it made me think of something. It actually reminded me a lot of how you and I tend to procrastinate. If we have a task to do and we know it's not yet due we will just wait.
+And so we would find things to do, as if to give us an excuse to procrastinate. All of a sudden, we get the idea of cutting our nails, taking a shower, doing this or that. Anything but the thing we actually need to do.
+And to me, these guys are probably in the same situation. They want to do anything but asking the question. As if you needed to have a diamond ring and ballons all over the place to get a couple of words out of your mouth.
+</p>
+
+
+
+<p>
+I found that when I just do it instead of asking myself "should I do it" for doing the dish for example, things are quite smooth. Funily enough, the same thought process can be applied here for our proposal. I did not ask myself "Should I? WHen? I need this or that." I just did it. I just asked yourself if you wanted to marry me because that's how I felt.
+I'm sure heard like this it might sound like a spur of the moment decision but, "on my side", I already knew I wanted to marry you. Therefore, the question simply came out when it felt like coming out. 
+<br>There, on the kitchen counter, kissing you while thinking about how I'll feel when you'll be going back to the philippines. That's when I felt like the question just had to be asked and answered. 
+</p>
+
+<p>
+I personaly believe that it was a beautiful proposal despite the lack of grand gestures. It wasn't even a planned proposal and I think it was the perfect beginning to a life where we accept simplicity, we accept life with all its banale things. We found that it is so easy to be happy with the littlest thing when you are in love. We also found that it is so futile to think about dimond rings or ballons when all you should want is sign a contract allowing you to stay together forever.
+</p>
+
+<p>Out of all the decisions I've taken in my life, asking you that question will never be something that I'll regret.
+</p>
+
+
+
+<p>
+    <span class="subtle-italic">
+        You have completed this week's calendar!<br><a href="{{ url_for('special_gift3') }}">Redeem your special gift</a>
+    </span>
+</p>
+
+
+
+        
+
+
+
+    </div>
+</body>
+</html>
