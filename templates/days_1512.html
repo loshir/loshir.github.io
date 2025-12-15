@@ -1,0 +1,173 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>Memory App - Home</title>
+
+    <style>
+        /* RESET */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* PAGE BASE */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #faf7f3;
+            color: #3e3a45;
+            display: flex;
+            justify-content: center;
+            padding: 18px 10px; /* reduced margin */
+        }
+
+        /* MAIN CONTAINER */
+        .page {
+            max-width: 780px; /* wider than before */
+            width: 100%;
+            background: #ffffff;
+            padding: 22px 18px; /* slightly tighter */
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            line-height: 1.6;
+        }
+
+        p {
+            margin-bottom: 18px;
+            font-size: 1.03rem;
+        }
+
+        strong {
+            font-weight: 600;
+            color: #2d2640;
+        }
+
+        /* SUBTLE DIVIDER */
+        .divider {
+            width: 100%;
+            height: 1px;
+            background: #eee;
+            margin: 26px 0;
+        }
+
+        /* IMAGE BLOCK */
+        .image-wrapper {
+            width: 100%;
+            margin: 14px 0 18px 0; /* more compact */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .image-wrapper img {
+            width: 100%;
+            height: auto;
+            border-radius: 14px;
+            object-fit: cover;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+        }
+
+        .image-caption {
+            margin-top: 10px;
+            font-style: italic;
+            font-size: 0.85rem;
+            color: #6a6473;
+            text-align: center;
+        }
+
+        /* TITLE IMAGE */
+        .title-image-wrapper {
+            width: 100%;
+            margin: 0 0 18px 0; /* slightly reduced */
+            display: flex;
+            justify-content: center;
+        }
+
+        .title-image-wrapper img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+
+        .end-gif-wrapper {
+            margin-top: 10px;
+            width: 100%;
+            display: flex;
+            flex-direction: column; /* stack vertically */
+            align-items: center;    /* center both image + caption */
+        }
+
+        .end-gif-wrapper img {
+            width: 50%;
+            height: auto;
+            border-radius: 14px;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+        }
+
+        .end-gif-wrapper .image-caption {
+            margin-top: 10px;
+            font-style: italic;
+            font-size: 0.85rem;
+            color: #6a6473;
+            text-align: center;
+        }
+.subtle-italic {
+    font-style: italic;
+    font-size: 0.9rem;
+    color: #5a5563; /* optional */
+    text-align: center;
+    display: block; /* needed so text-align works properly */
+}
+
+
+
+    </style>
+</head>
+
+<body>
+    <div class="page">
+                <img src="/static/images/home.svg" alt="home" style="width:56px;height:56px;vertical-align:middle;margin-bottom:18px;cursor:pointer;" onclick="window.location.href='{{ url_for('home_week4') }}'"/>
+        <div class="image-wrapper">
+            <img src="/static/images/title_1512.png" alt="Title">
+        </div>
+
+<p>
+	People sure like to complicate their lives with a grand proposal and wedding but, comme d'hab, we like to do things differently.
+</p>
+		
+<div class="divider"></div>
+
+
+<p>
+	For us, it seems like simplicity was always in order and we really understood that the first purpose of getting married, is to be married. Nothing else matters. Just sign the papers, get legally bound to each other and boom you're married. The getting married part should be easy and painless, just like we did it. Because what's really important, and that most people forget, is that when getting married, you're actually making a promise.
+	<br>You're making the promise to commit to your partner and to always have their well being in mind. It means that no matter what happens in life, your partner must be your priority. People also tend to focus more on the wedding day than the married life, which to me is simply stupidity. How can you care more about one day than about the rest of your life. You should ensure that the person you're with is someone you'd want to hear the voice of every morning. You should ensure that this person will make you horny all the time.
+</p>
+
+
+
+<p>
+And so, our wedding day, as simple as it was and as odd as pepople might think it was, I loved it. I love how simple it was to just welcome Elodie and Maman there, have a nice lunch with them before going there and signing the papers like it was nothing.
+	<br>When I say that, to me, I don't view that day as a critical one, I mean it as a compliment. It was smooth sailing, tranquille, no doubt, no worries. It also felt so natural for us to continue our journey together. I didn't think for one second "Oh wait is it too fast? Are we sure about this?". As important as being married is, the actual event, seemed so easy for me. I didn't feel any pressure and I was already so sure of us that I knew it would simply be a formality for us. Just another Monday.
+	<br>I want to ensure that you understand that, with me saying that, I mean to say that, I was so sure, so undoubtful, that it felt natural and normal for me to get married to you.
+</p>
+
+<p>
+And, to me, the purest way we express our love to each other is through realisations like this one. How much do you actually love someone to be that sure. How much more compared to normal people, do you actually love your partner for you to not even question the decision or binding yourself with them forever. 
+	<br>I know we like to make fun of people who tend to worry too much about the wedding day and not the actual marriage, but I actually pity them. I wish everyone could feel as happy as I was on that day. How calm and serene I was. I wish people would know what it's like to have you dream manifest in such a beautiful reality.
+</p>
+
+<div class="end-gif-wrapper">
+    <img src="/static/images/pandgsleep.jpg" alt="cuddle">
+    <p class="image-caption"> They're living their best life and so are we.
+    </p>
+</div>
+
+
+
+    </div>
+</body>
+</html>

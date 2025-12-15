@@ -86,6 +86,7 @@
             color: #4a4255; /* 60% Neutral: Light text for contrast */
             font-size: 1.2rem;
             font-weight: 600;
+            margin-top: 40px;
             padding: 16px 32px;
             border: none;
             border-radius: 25px;
@@ -195,7 +196,15 @@
                 margin: 2px;
                 text-decoration: none;
             }
+            .image-caption {
+            font-style: italic;
+            font-size: 0.85rem;
+            color: #6a6473;
+            text-align: center;
+            margin-bottom: 60px;
         }
+        }
+        
 
 
 
@@ -203,36 +212,34 @@
 </head>
 <body>
     <div class="home-container">
-        <div class="home-buttons">
+         <div class="home-buttons">
             <div class="home-button-group">
-                <img src="/static/images/Go_back.png" alt="home" onclick="window.location.href='{{ url_for('home') }}'"/>
-                <p class="image-caption">Wanna go back ?</p>
+                <img src="/static/images/week1.gif" alt="home" onclick="window.location.href='{{ url_for('home') }}'"/>
             </div>
 
             <div class="home-button-group">
-                <img src="/static/images/gomarun.gif" alt="home" onclick="window.location.href='{{ url_for('home_week3') }}'"/>
-                <p class="image-caption">Back to week 3</p>
+                <img src="/static/images/peachboba.gif" alt="home" onclick="window.location.href='{{ url_for('home_week3') }}'"/>
             </div>
         </div>
-        <h1>title</h1>
 
-        <a href="{{ url_for('random_memory') }}" class="random-btn">
-            magic button
-        </a>
+
 
         <div class="calendar">
             <h2>Fourth week!</h2>
             <h3>Claim all the rewards for a special gift!</h3>
             <ul class="calendar-week">
-                <li><a class="calendar-day" data-date="2025-12-15">15</a></li>
+                <li><a href="{{ url_for('days_1512')}}" class="calendar-day" data-date="2025-12-15">15</a></li>
                 <li><a class="calendar-day" data-date="2025-12-16">16</a></li>
                 <li><a class="calendar-day" data-date="2025-12-17">17</a></li>
                 <li><a class="calendar-day" data-date="2025-12-18">18</a></li>
                 <li><a class="calendar-day" data-date="2025-12-19">19</a></li>
                 <li><a class="calendar-day" data-date="2025-12-20">20</a></li>
-                <li><a href="{{ url_for('home') }}" class="calendar-day" data-date="2025-12-21">21</a></li>
+                <li><a class="calendar-day" data-date="2025-12-21">21</a></li>
             </ul>
         </div>
+                <a href="{{ url_for('random_memory') }}" class="random-btn">
+            magic button
+        </a>
     </div>
 </body>
 </html>
