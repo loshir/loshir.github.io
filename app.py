@@ -31,6 +31,10 @@ def home_week3():
 def home_week4():
 	return render_template("home_week4.html")
 
+@app.route('/home_week5')
+def home_week5():
+	return render_template("home_week5.html")
+
 @app.route('/days_2411')
 def days_2411():
 	return render_template("days_2411.html")
