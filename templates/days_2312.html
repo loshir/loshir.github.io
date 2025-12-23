@@ -1,0 +1,179 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>Memory App - Home</title>
+
+    <style>
+        /* RESET */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* PAGE BASE */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #faf7f3;
+            color: #3e3a45;
+            display: flex;
+            justify-content: center;
+            padding: 18px 10px; /* reduced margin */
+        }
+
+        /* MAIN CONTAINER */
+        .page {
+            max-width: 780px; /* wider than before */
+            width: 100%;
+            background: #ffffff;
+            padding: 22px 18px; /* slightly tighter */
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            line-height: 1.6;
+        }
+
+        p {
+            margin-bottom: 18px;
+            font-size: 1.03rem;
+        }
+
+        strong {
+            font-weight: 600;
+            color: #2d2640;
+        }
+
+        /* SUBTLE DIVIDER */
+        .divider {
+            width: 100%;
+            height: 1px;
+            background: #eee;
+            margin: 26px 0;
+        }
+
+        /* IMAGE BLOCK */
+        .image-wrapper {
+            width: 100%;
+            margin: 14px 0 18px 0; /* more compact */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .image-wrapper img {
+            width: 100%;
+            height: auto;
+            border-radius: 14px;
+            object-fit: cover;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+        }
+
+        .image-caption {
+            margin-top: 10px;
+            font-style: italic;
+            font-size: 0.85rem;
+            color: #6a6473;
+            text-align: center;
+        }
+
+        /* TITLE IMAGE */
+        .title-image-wrapper {
+            width: 100%;
+            margin: 0 0 18px 0; /* slightly reduced */
+            display: flex;
+            justify-content: center;
+        }
+
+        .title-image-wrapper img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+
+        .end-gif-wrapper {
+            margin-top: 10px;
+            width: 100%;
+            display: flex;
+            flex-direction: column; /* stack vertically */
+            align-items: center;    /* center both image + caption */
+        }
+
+        .end-gif-wrapper img {
+            width: 50%;
+            height: auto;
+            border-radius: 14px;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+        }
+
+        .end-gif-wrapper .image-caption {
+            margin-top: 10px;
+            font-style: italic;
+            font-size: 0.85rem;
+            color: #6a6473;
+            text-align: center;
+        }
+.subtle-italic {
+    font-style: italic;
+    font-size: 0.9rem;
+    color: #5a5563; 
+    text-align: center;
+    display: block; 
+}
+
+
+
+    </style>
+</head>
+
+<body>
+    <div class="page">
+                <img src="/static/images/home.svg" alt="home" style="width:56px;height:56px;vertical-align:middle;margin-bottom:18px;cursor:pointer;" onclick="window.location.href='{{ url_for('home_week5') }}'"/>
+        <div class="image-wrapper">
+            <img src="/static/images/title_2312.png" alt="Title">
+        </div>
+
+<p>
+	Despite us living in this sort-of haunted house for the first part, I always felt at home with you in Hazi.
+</p>
+		
+<div class="divider"></div>
+
+
+<p>
+	I tried my best to make it better, this shitty little house. I wanted everything to be perfect for your arrival but there was so much work. So much to do for it to be decent. After all, I'm glad we moved out for a simpler, better and cheaper place.
+<br>I really love our little appartment. Sure enough not everything is perfect but I like how small it is and how it really shows that we don't need more space. It's the perfect embodiment of "we just need each other".
+</p>
+
+
+
+<p>
+I think Hazebrouck is really a place for us. Just like any small town would be. We definitely are not people who'd be comfortable in a large city in France. I think we would be comfortable in a large city granted that you can get delivered a lot of things. Just like in Manila. But not en France.
+<br>Here it's better to enjoy the quiet of the country side, not really having any neighbors, or very few. I think life in Hazi is quite tranquille, very much like what we would like to have for the rest of our lives. It would be even better if I didn't have to go on site to work 3 days per week. Just staying within these walls every day with you. That's also why I wish to have an online job, so that we can maximize time spent together.
+<br>For me, the most important thing in life is that we get to spend time with the people we love, and you are first in that category.
+</p>
+
+<p>
+I would definitely say that I'd feel at home anywhere with you, I can adapt to the location too. I like that we're trying to get to this minimalist point where we sell most of our furnitures and have nothing in the living room. I bet my family would think that we're completely crazy to do that, and we probably are un peu ahah. But I don't think they would understand the idea of minimalism. THe idea that, with less, we'll feel better. With less, we will concentrate on the things that really matter.
+<br>Hazi seems to be the perfect location to do that. The peace and quiet will help us to reach that goal and make sure that everyday we simply focus on what really matters, each other.
+</p>
+
+<p class="subtle-italic">I can't wait for you to be back home so I can prepare you some tea.
+</p>
+
+
+
+<div class="end-gif-wrapper">
+    <img src="/static/images/cooking.gif" alt="cuddle">
+    <p class="image-caption"> Look how peach is looking for snacks ahah!
+    </p>
+</div>
+
+
+
+
+    </div>
+</body>
+</html>
