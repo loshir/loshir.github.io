@@ -1,0 +1,252 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>Memory App - Home</title>
+
+    <style>
+        /* RESET */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* PAGE BASE */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #faf7f3;
+            color: #3e3a45;
+            display: flex;
+            justify-content: center;
+            padding: 18px 10px; /* reduced margin */
+        }
+
+        /* MAIN CONTAINER */
+        .page {
+            max-width: 780px; /* wider than before */
+            width: 100%;
+            background: #ffffff;
+            padding: 22px 18px; /* slightly tighter */
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            line-height: 1.6;
+        }
+
+        p {
+            margin-bottom: 18px;
+            font-size: 1.03rem;
+        }
+
+        strong {
+            font-weight: 600;
+            color: #2d2640;
+        }
+
+        /* SUBTLE DIVIDER */
+        .divider {
+            width: 100%;
+            height: 1px;
+            background: #eee;
+            margin: 26px 0;
+        }
+
+        /* IMAGE BLOCK */
+        .image-wrapper {
+            width: 100%;
+            margin: 14px 0 18px 0; /* more compact */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .image-wrapper img {
+            width: 100%;
+            height: auto;
+            border-radius: 14px;
+            object-fit: cover;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+        }
+
+        .image-caption {
+            margin-top: 10px;
+            font-style: italic;
+            font-size: 0.85rem;
+            color: #6a6473;
+            text-align: center;
+        }
+
+        /* TITLE IMAGE */
+        .title-image-wrapper {
+            width: 100%;
+            margin: 0 0 18px 0; /* slightly reduced */
+            display: flex;
+            justify-content: center;
+        }
+
+        .title-image-wrapper img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+
+        .end-gif-wrapper {
+            margin-top: 10px;
+            width: 100%;
+            display: flex;
+            flex-direction: column; /* stack vertically */
+            align-items: center;    /* center both image + caption */
+        }
+
+        .end-gif-wrapper img {
+            width: 50%;
+            height: auto;
+            border-radius: 14px;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+        }
+
+        .end-gif-wrapper .image-caption {
+            margin-top: 10px;
+            font-style: italic;
+            font-size: 0.85rem;
+            color: #6a6473;
+            text-align: center;
+        }
+.subtle-italic {
+    font-style: italic;
+    font-size: 0.9rem;
+    color: #5a5563; 
+    text-align: center;
+    display: block; 
+}
+
+
+
+    </style>
+</head>
+
+<body>
+    <div class="page">
+                <img src="/static/images/home.svg" alt="home" style="width:56px;height:56px;vertical-align:middle;margin-bottom:18px;cursor:pointer;" onclick="window.location.href='{{ url_for('home_week5') }}'"/>
+        <div class="image-wrapper">
+            <img src="/static/images/title_2412.png" alt="Title">
+        </div>
+
+<p align="center">
+	Joyeux noël ma chérie!! 🎄
+</p>
+		
+<div class="divider"></div>
+
+
+<p>
+I don't think I've ever had a christmas spirit. Even when I was a kid, as long as I can remember, I was just interested in the gifts. And of course, as you get older, the gifts are fewer and therefore, my interest for it vanished. I don't necessarily think it's sad because I enjoy it mainly through giving or through the eyes of others. Par exemple, I know how important it is for mamie and so I always want to make sure to be of help for her to get the best christmas possible. I think that secretly, you care about christmas a lot and so I would like, as you said last time, to start some traditions as soon as we have some of our own. Déjà, I think it's a good idea for us to start buying decoration here and there during the year, sort of spreading the spending for it so that we can have a nice tree for a relatively small cost. Or at least a cost that we didn't feel so much. 
+</p>
+
+
+    
+            <!-- Background music: hidden, autoplaying. Will be paused when the user plays the video. -->
+            <audio id="bg-music" src="{{ url_for('static', filename='music/christmassounds.mp3') }}" autoplay loop preload="auto" style="display:none" aria-hidden="true"></audio>
+
+            <!-- Fallback button shown only if autoplay is blocked (styled to match site palette) -->
+            <button id="enable-music-btn" aria-label="Enable music" style="display:none; position:fixed; right:18px; top:18px; z-index:9999; background:#2d2640; color:#faf7f3; border:none; padding:8px 10px; border-radius:8px; font-size:0.9rem; box-shadow:0 6px 18px rgba(45,38,64,0.12); cursor:pointer;">Click here to enable the music</button>
+
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    var audio = document.getElementById('bg-music');
+                    var video = document.querySelector('video');
+                    var btn = document.getElementById('enable-music-btn');
+                    var userStarted = false; // whether user explicitly started music
+                    var wasPlayingBeforeVideo = false;
+
+                    if (audio) {
+                        // Lower default background music volume to be less intrusive
+                        audio.volume = 0.03;
+                        var p = audio.play();
+                        if (p && typeof p.then === 'function') {
+                            p.then(function () {
+                                userStarted = true; // autoplay succeeded
+                            }).catch(function () {
+                                // Autoplay blocked: show unobtrusive button to allow user to enable music
+                                if (btn) btn.style.display = 'block';
+                            });
+                        }
+
+                        // If user clicks the enable button, try to play and hide button on success
+                        if (btn) {
+                            btn.addEventListener('click', function () {
+                                var p2 = audio.play();
+                                if (p2 && typeof p2.then === 'function') {
+                                    p2.then(function () {
+                                        userStarted = true;
+                                        btn.style.display = 'none';
+                                    }).catch(function () {
+                                        // still blocked or error; keep the button visible
+                                    });
+                                }
+                            });
+                        }
+                    }
+
+                    if (video && audio) {
+                        video.addEventListener('play', function () {
+                            try {
+                                wasPlayingBeforeVideo = !audio.paused;
+                                audio.pause();
+                                audio.currentTime = 0;
+                            } catch (e) { /* ignore */ }
+                        });
+
+                        video.addEventListener('ended', function () {
+                            try {
+                                // Only try to resume if audio was playing before the video
+                                if (wasPlayingBeforeVideo || userStarted) {
+                                    var p3 = audio.play();
+                                    if (p3 && typeof p3.catch === 'function') p3.catch(function(){ /* autoplay blocked */ });
+                                }
+                            } catch (e) { /* ignore */ }
+                        });
+                    }
+                });
+            </script>
+
+
+
+<p>
+When I was in the Philippines with you and the christmas season was starting, I sort of felt what it was to be somewhere where the hype for christmas is really high. I remember being so amused at how over the top the decorations were in SM. The christmas songs playing everywhere and you starting to prepare gifts such a long time in advance. 
+<br>I remember how good I felt after we exchanged gifts with your aunts. I was quite touched by their gifts. Of course, I know you probably influenced them a bit but I was so touched that it was thoughtful despite them only knowing me for a short time. Par example, and people might find it silly, but the most touching gift from your family was the Otap. It really told me "I know you and I have been noticing you". In the same way, if I was mamie, I would have been so touched by how you thought of these things for the seatbelt. Because without even me needing to ask of you, you do it. And I think this is the purest, most beautiful form of caring for someone. You naturally want to do the things that you know will make them happy or comfortable.
+</p>
+
+<p>
+En fait, christmas is mainly experienced in the preparation of it. During the said day, things are pretty normal, perhaps even a normal kind of day. But it's during the days leading up to it that you feel the christmas spirit I think. When you are thinking of a gift for someone, or when you're preparing a surprise for a loved one.
+<br>I still don't know if I have a christmas spirit, but I know that I enjoy the days leading up to christmas when I have things to prepare / purshase for you because I know that I will be so happy when you receive it. I always get so excited and impatient for you to open whatever I have prepared. It's probably why we often end up opening our gifts in advance.
+<br>I have noticed that during the christmas season, you and I tend to give each other so many gifts. It's like we planned on giving each other one thing and then it lead to another, and another... Until we basically have like 5 gifts each. I think it's cute because it's reflective of how we just cannot help ourselves. We want what's best for the other and we intend on giving it no matter what.
+</p>
+
+
+<div class="end-gif-wrapper">
+    <img src="/static/images/christmas.jpg" alt="cuddle">
+    <p class="image-caption"> Let's make a tree next year!! 
+    </p>
+</div>
+
+<div class="divider"></div>
+
+<p class="subtle-italic">For today's entry, there is a special thing at the bottom! A little video that serves as a clue for something I have planned for us in the near future! Tell me what you think you're guessing from it and I'll tell you what it is!! 
+    <br> I tried my best to make it entertaining! I didn't have much time as I had to do it at night at mamie's but I hope you enjoy it!
+</p>
+
+
+
+
+
+    <video width="525" height="425" controls >
+    <source src="{{ url_for('static', filename='images/Theimpressionistsroad.mov') }}" type="video/quicktime">
+    Your browser does not support the video tag. You can <a href="{{ url_for('static', filename='images/Theimpressionistsroad.mov') }}">download the video</a> instead.
+</video>
+    </div>
+</body>
+</html>

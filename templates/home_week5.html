@@ -170,9 +170,9 @@
         }
         
         html, body {
-            overflow: hidden; /* Prevent all scrolling */
-            height: 100vh; /* Lock to viewport height */
-            width: 100vw; /* Lock to viewport width */
+              overflow: auto; /* keep normal scrolling and responsive behavior */
+              min-height: 100%;
+              width: 100%;
         }   
 
 
@@ -210,8 +210,8 @@
 
     </style>
 </head>
-<body>
-    <div class="home-container">
+ <body>
+     <div class="home-container">
          <div class="home-buttons">
             <div class="home-button-group">
                 <img src="/static/images/week1.gif" alt="home" onclick="window.location.href='{{ url_for('home') }}'"/>

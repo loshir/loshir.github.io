@@ -523,7 +523,15 @@ I would definitely say that I'd feel at home anywhere with you, I can adapt to t
 I can't wait for you to be back home so I can prepare you some tea.
 
 24-12 : Christmas Special ( Add a little tree ) PH side
+
+	I don't think I ever felt a christmas spirit. Probably when I was a kid for the gifts.
 	How it was there with your family at Christmas
+
+
+<video width="525" height="425" controls >
+    <source src="{{ url_for('static', filename='images/Theimpressionistsroad.mov') }}" type="video/quicktime">
+    Your browser does not support the video tag. You can <a href="{{ url_for('static', filename='images/Theimpressionistsroad.mov') }}">download the video</a> instead.
+</video>
 25-12 : Christmas Special AGAIN FR side
 	How it was here with my family at Christmas.
 26-12 : 
