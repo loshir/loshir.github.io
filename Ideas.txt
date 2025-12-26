@@ -533,6 +533,17 @@ I can't wait for you to be back home so I can prepare you some tea.
     Your browser does not support the video tag. You can <a href="{{ url_for('static', filename='images/Theimpressionistsroad.mov') }}">download the video</a> instead.
 </video>
 25-12 : Christmas Special AGAIN FR side
+
+	On the 24th, I told you about how it felt to spend christmas there, in the Philippines with your family.
+
+Today, I'd like to tell you about how it felt to have you spend your first christmas en France.
+<br>It was both quite sweet and sad at the same time. I'll talk about the sad parts first so that we end on a good note. I think it was sad because I know how much you missed your family. I know how much you like spending it there, exchanging gifts with your aunts and having your mom's food. I also think it was a bit sad because it really wasn't the best ones we've gotten here en France. Christmas events are really like a coinflip here. Some years might be better than others and considering how we had this ordered food and all the kids, it was not the best. It made me a bit sad that we had such a good time this year with the karaoke because I wished you were here. I bet you would have liked it, kind of like that party we had at Elodie's. 
+<br>En fait, I would say that everything is much better with you. The highlight of my 25th of december was seeing you. Despite being surrounded by family and having a good time with them, laughing playing this esquissé game, the highlight is just seeing your petit face. That's what I care about, that's what matters. 
+
+But I think it was so sweet to have you here for christmas last year. Déjà, I think it made you feel quite good that people got you gifts and to see mamie like the books you picked for her. En fait, I can truly say that you are part of the family because people are asking about you, thinking about you and want to include you in everything. I bet mamie was sad that you were not here because I know she loves you so much. 
+<br>I also felt that it was quite special for us to spend our first christmas together. I just love our way of giving gifts to each other. I love that we also make handmade things too. I think christmas should be about being able to let your love express itself as crazily as possible for the person you care about. I think it should be about wanting to make the other person feel loved and appreciated.
+<br>I just love it so much when I see that you feel cared about. I want to heal that little Tazi and tell her that she is smart, funny and cute. That she deserves all the love in the world and that I intend on giving it to her.
+
 	How it was here with my family at Christmas.
 26-12 : 
 27-12 :

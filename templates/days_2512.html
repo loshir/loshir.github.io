@@ -1,0 +1,177 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>Memory App - Home</title>
+
+    <style>
+        /* RESET */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* PAGE BASE */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #faf7f3;
+            color: #3e3a45;
+            display: flex;
+            justify-content: center;
+            padding: 18px 10px; /* reduced margin */
+        }
+
+        /* MAIN CONTAINER */
+        .page {
+            max-width: 780px; /* wider than before */
+            width: 100%;
+            background: #ffffff;
+            padding: 22px 18px; /* slightly tighter */
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            line-height: 1.6;
+        }
+
+        p {
+            margin-bottom: 18px;
+            font-size: 1.03rem;
+        }
+
+        strong {
+            font-weight: 600;
+            color: #2d2640;
+        }
+
+        /* SUBTLE DIVIDER */
+        .divider {
+            width: 100%;
+            height: 1px;
+            background: #eee;
+            margin: 26px 0;
+        }
+
+        /* IMAGE BLOCK */
+        .image-wrapper {
+            width: 100%;
+            margin: 14px 0 18px 0; /* more compact */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .image-wrapper img {
+            width: 100%;
+            height: auto;
+            border-radius: 14px;
+            object-fit: cover;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+        }
+
+        .image-caption {
+            margin-top: 10px;
+            font-style: italic;
+            font-size: 0.85rem;
+            color: #6a6473;
+            text-align: center;
+        }
+
+        /* TITLE IMAGE */
+        .title-image-wrapper {
+            width: 100%;
+            margin: 0 0 18px 0; /* slightly reduced */
+            display: flex;
+            justify-content: center;
+        }
+
+        .title-image-wrapper img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+
+        .end-gif-wrapper {
+            margin-top: 10px;
+            width: 100%;
+            display: flex;
+            flex-direction: column; /* stack vertically */
+            align-items: center;    /* center both image + caption */
+        }
+
+        .end-gif-wrapper img {
+            width: 50%;
+            height: auto;
+            border-radius: 14px;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+        }
+
+        .end-gif-wrapper .image-caption {
+            margin-top: 10px;
+            font-style: italic;
+            font-size: 0.85rem;
+            color: #6a6473;
+            text-align: center;
+        }
+.subtle-italic {
+    font-style: italic;
+    font-size: 0.9rem;
+    color: #5a5563; 
+    text-align: center;
+    display: block; 
+}
+
+
+
+    </style>
+</head>
+
+<body>
+    <div class="page">
+                <img src="/static/images/home.svg" alt="home" style="width:56px;height:56px;vertical-align:middle;margin-bottom:18px;cursor:pointer;" onclick="window.location.href='{{ url_for('home_week5') }}'"/>
+        <div class="image-wrapper">
+            <img src="/static/images/title_2512.png" alt="Title">
+        </div>
+
+<p align="center">
+	On the 24th, I told you about how it felt to spend christmas there, in the Philippines with your family.
+</p>
+		
+<div class="divider"></div>
+
+
+<p>
+	Today, I'd like to tell you about how it felt to have you spend your first christmas en France.
+<br>It was both quite sweet and sad at the same time. I'll talk about the sad parts first so that we end on a good note. I think it was sad because I know how much you missed your family. I know how much you like spending it there, exchanging gifts with your aunts and having your mom's food. I also think it was a bit sad because it really wasn't the best ones we've gotten here en France. Christmas events are really like a coinflip here. Some years might be better than others and considering how we had this ordered food and all the kids, it was not the best. It made me a bit sad that we had such a good time this year with the karaoke because I wished you were here. I bet you would have liked it, kind of like that party we had at Elodie's. 
+<br>En fait, I would say that everything is much better with you. The highlight of my 25th of december was seeing you. Despite being surrounded by family and having a good time with them, laughing playing this esquissé game, the highlight is just seeing your petit face. That's what I care about, that's what matters. 
+</p>
+
+
+
+<p>
+But I think it was so sweet to have you here for christmas last year. I'm happy you were able to be part of mamie and papy's vidéo. It was quite a special thing and I wanted you to be part of it. 
+<br>Also, I think it made you feel quite good that people got you gifts and to see mamie like the books you picked for her. En fait, I can truly say that you are part of the family because people are asking about you, thinking about you and want to include you in everything. I bet mamie was sad that you were not here because I know she loves you so much. 
+<br>I also felt that it was quite special for us to spend our first christmas together. I just love our way of giving gifts to each other. I love that we also make handmade things too. I think christmas should be about being able to let your love express itself as crazily as possible for the person you care about. I think it should be about wanting to make the other person feel loved and appreciated.
+<br>I just love it so much when I see that you feel cared about. I want to heal that little Tazi and tell her that she is smart, funny and cute. That she deserves all the love in the world and that I intend on giving it to her.
+</p>
+
+
+<p class="subtle-italic">How did you feel spending christmas en France for the first time ?
+</p>
+
+
+
+<div class="end-gif-wrapper">
+    <img src="/static/images/25.jpg" alt="cuddle">
+    <p class="image-caption">
+    </p>
+</div>
+
+
+
+
+    </div>
+</body>
+</html>
