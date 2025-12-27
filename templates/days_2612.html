@@ -1,0 +1,175 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>Memory App - Home</title>
+
+    <style>
+        /* RESET */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* PAGE BASE */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #faf7f3;
+            color: #3e3a45;
+            display: flex;
+            justify-content: center;
+            padding: 18px 10px; /* reduced margin */
+        }
+
+        /* MAIN CONTAINER */
+        .page {
+            max-width: 780px; /* wider than before */
+            width: 100%;
+            background: #ffffff;
+            padding: 22px 18px; /* slightly tighter */
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            line-height: 1.6;
+        }
+
+        p {
+            margin-bottom: 18px;
+            font-size: 1.03rem;
+        }
+
+        strong {
+            font-weight: 600;
+            color: #2d2640;
+        }
+
+        /* SUBTLE DIVIDER */
+        .divider {
+            width: 100%;
+            height: 1px;
+            background: #eee;
+            margin: 26px 0;
+        }
+
+        /* IMAGE BLOCK */
+        .image-wrapper {
+            width: 100%;
+            margin: 14px 0 18px 0; /* more compact */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .image-wrapper img {
+            width: 100%;
+            height: auto;
+            border-radius: 14px;
+            object-fit: cover;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+        }
+
+        .image-caption {
+            margin-top: 10px;
+            font-style: italic;
+            font-size: 0.85rem;
+            color: #6a6473;
+            text-align: center;
+        }
+
+        /* TITLE IMAGE */
+        .title-image-wrapper {
+            width: 100%;
+            margin: 0 0 18px 0; /* slightly reduced */
+            display: flex;
+            justify-content: center;
+        }
+
+        .title-image-wrapper img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+
+        .end-gif-wrapper {
+            margin-top: 10px;
+            width: 100%;
+            display: flex;
+            flex-direction: column; /* stack vertically */
+            align-items: center;    /* center both image + caption */
+        }
+
+        .end-gif-wrapper img {
+            width: 50%;
+            height: auto;
+            border-radius: 14px;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+        }
+
+        .end-gif-wrapper .image-caption {
+            margin-top: 10px;
+            font-style: italic;
+            font-size: 0.85rem;
+            color: #6a6473;
+            text-align: center;
+        }
+.subtle-italic {
+    font-style: italic;
+    font-size: 0.9rem;
+    color: #5a5563; 
+    text-align: center;
+    display: block; 
+}
+
+
+
+    </style>
+</head>
+
+<body>
+    <div class="page">
+                <img src="/static/images/home.svg" alt="home" style="width:56px;height:56px;vertical-align:middle;margin-bottom:18px;cursor:pointer;" onclick="window.location.href='{{ url_for('home_week5') }}'"/>
+        <div class="image-wrapper">
+            <img src="/static/images/title_2612.png" alt="Title">
+        </div>
+
+<p align="center">
+	Planning the little Impressionist tour made me think about something I love.
+</p>
+		
+<div class="divider"></div>
+
+
+<p>
+	Whenever we would go to a museum, I'm always fascinated by how passionate you are about paintings. The feeling of joy I get bringing you there and seeing you be so happy and fulfilled never gets old. That's mainly why I wanted to bring you on this little homemade tour. I wish to make that feeling last longer and to see you the happiest you can be.
+<br>I love that you're so passionate about something, and that you're also so good at it. It makes it quite easy for me to encourage you into pursuing your passion and to support you. I can't imagine how would I have done if your paintings were not good. Of course, since it brings you joy to paint, I would still tell you to paint but it wouldn't be as easy as it is with you being so good to encourage you and even share your paintings to everyone. 
+<br>It actually is quite the contrary, I am so proud to have such a talented petit wife that I would share your paintings to anyone who'd be interested. I just feel so much pride to say "my wife did this". 
+</p>
+
+
+
+<p>
+It also comes with a bonus of you being so knowledgable about paintings and artists. Even more so than a lot of french people despite a lot of artists being french. I love how you could spend hours staring at the nymphéas in l'Orangerie, how fascinated you are by the details Monet included in his work. It is such a beautiful sight to see my wife being so into something, being so interested and passionate about something. It makes me want to protect that part of you and make it grow. Be the Tazi that little Tazi wanted to be.
+<br>I think it's never too late to do art regardless. You don't need a degree, you just need your passion and your natural talent for it. Then, you can work your way up to the technics I guess. But I do feel like you already have a lot of technique. 
+</p>
+
+<p>
+I'm also very happy that you get to dive fully into your passion for painting with this project you have for me. All these little paintings are so beautiful and I feel so priviledged to be the inspiration for you to paint them. It is actually quite amusing that I, of all people, could be sort of a "muse". I never thought I could be something like that. But here we are, with you painting for me and I love it.
+<br>I want you to never let go of that passion you have for painting and paintings, I love to see your eyes sparkle with joy whenever we go to a museum. And I promise to bring you to all the museums you want to visit. This should be one of our life goals, for you to see all the paintings you want to see.
+</p>
+
+
+<div class="end-gif-wrapper">
+    <img src="/static/images/inabubble.jpg" alt="cuddle">
+    <p class="image-caption"> I know it's not necessarily related to today's entry but I just thought they were so cute...
+    </p>
+</div>
+
+
+
+
+    </div>
+</body>
+</html>

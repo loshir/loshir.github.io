@@ -1,0 +1,175 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>Memory App - Home</title>
+
+    <style>
+        /* RESET */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* PAGE BASE */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #faf7f3;
+            color: #3e3a45;
+            display: flex;
+            justify-content: center;
+            padding: 18px 10px; /* reduced margin */
+        }
+
+        /* MAIN CONTAINER */
+        .page {
+            max-width: 780px; /* wider than before */
+            width: 100%;
+            background: #ffffff;
+            padding: 22px 18px; /* slightly tighter */
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            line-height: 1.6;
+        }
+
+        p {
+            margin-bottom: 18px;
+            font-size: 1.03rem;
+        }
+
+        strong {
+            font-weight: 600;
+            color: #2d2640;
+        }
+
+        /* SUBTLE DIVIDER */
+        .divider {
+            width: 100%;
+            height: 1px;
+            background: #eee;
+            margin: 26px 0;
+        }
+
+        /* IMAGE BLOCK */
+        .image-wrapper {
+            width: 100%;
+            margin: 14px 0 18px 0; /* more compact */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .image-wrapper img {
+            width: 100%;
+            height: auto;
+            border-radius: 14px;
+            object-fit: cover;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+        }
+
+        .image-caption {
+            margin-top: 10px;
+            font-style: italic;
+            font-size: 0.85rem;
+            color: #6a6473;
+            text-align: center;
+        }
+
+        /* TITLE IMAGE */
+        .title-image-wrapper {
+            width: 100%;
+            margin: 0 0 18px 0; /* slightly reduced */
+            display: flex;
+            justify-content: center;
+        }
+
+        .title-image-wrapper img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+
+        .end-gif-wrapper {
+            margin-top: 10px;
+            width: 100%;
+            display: flex;
+            flex-direction: column; /* stack vertically */
+            align-items: center;    /* center both image + caption */
+        }
+
+        .end-gif-wrapper img {
+            width: 50%;
+            height: auto;
+            border-radius: 14px;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+        }
+
+        .end-gif-wrapper .image-caption {
+            margin-top: 10px;
+            font-style: italic;
+            font-size: 0.85rem;
+            color: #6a6473;
+            text-align: center;
+        }
+.subtle-italic {
+    font-style: italic;
+    font-size: 0.9rem;
+    color: #5a5563; 
+    text-align: center;
+    display: block; 
+}
+
+
+
+    </style>
+</head>
+
+<body>
+    <div class="page">
+                <img src="/static/images/home.svg" alt="home" style="width:56px;height:56px;vertical-align:middle;margin-bottom:18px;cursor:pointer;" onclick="window.location.href='{{ url_for('home_week5') }}'"/>
+        <div class="image-wrapper">
+            <img src="/static/images/title_2712.png" alt="Title">
+        </div>
+
+<p align="center">
+	Today's morning felt weird.
+</p>
+		
+<div class="divider"></div>
+
+
+<p>
+	It made me feel so good to sleep with you on the phone after waking up but it also made me feel quite sad. I think my heart it breaking up a little bit more everytime I open my eyes and see that you're not here. When I wake up holding a pillow instead of you, I just feel so sad because it is a harsh reminder that you're away. It's the truth smacking me in the face right when I wake up.
+<br>I told you that I used to love being alone when that B was out to see her family in Réunion. And, quite naturally, I thought that, there was some element of normalcy in there. Sure enough, I probably shouldn't be "that" happy but it's quite normal to enjoy some nice quality alone time. Well, it turns out that if you truly love your partner and have your life revolving around them, being alone sucks so much.
+<br>I don't know how you feel when you're in the petit room compared to when you're downstairs with your mom or at your aunt's, but for me being alone is quite difficult. I used to be able to just get busy with my series or movies, playing some petit games, but as I don't really have anything of the sort at the moment, I'm just bored and feel like sleeping to let time pass faster.
+</p>
+
+
+
+<p>
+And so, when I woke up this morning, I didn't originally want to sleep but, being with you on the phone, made me feel good and therefore sleepy. I just felt so comfortable that it was like an opportunity for me to continue my night and get some well overdue rest. But this is a double-edged sword because it also takes away precious time we could have together to talk to each other.
+<br>I would also say that, this time feels quite different. I don't know if you'll agree, but it's like we got so used to being together in the same room that it just cannot do the trick to be on the phone. It's like I have to be able to touch you, hold you, to feel your presence. I need for us to breathe the same air en fait.
+</p>
+
+<p>Perhaps in a parallel world where you decided to stay there to work and wait for me, we would get use to it and get back to being so at ease with just being on the phone, even having sex over the phone again. But I'm not even sure I wanna find out. I love being with you so much that I don't think it's worth your previous salary to take us apart. I'd rather be with you all the time. Stuck to each other and loving each other.
+I miss you so much mon amour. You are my reason to live. </p>
+
+
+
+
+<div class="end-gif-wrapper">
+    <img src="/static/images/earbite.gif" alt="cuddle">
+    <p class="image-caption">Look at her biting his ear to try to make him feel better!!
+    </p>
+</div>
+
+
+
+
+    </div>
+</body>
+</html>
