@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>Memory App - Home</title>
+
+    <style>
+        /* RESET */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* PAGE BASE */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #faf7f3;
+            color: #3e3a45;
+            display: flex;
+            justify-content: center;
+            padding: 18px 10px; /* reduced margin */
+        }
+
+        /* MAIN CONTAINER */
+        .page {
+            max-width: 780px; /* wider than before */
+            width: 100%;
+            background: #ffffff;
+            padding: 22px 18px; /* slightly tighter */
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            line-height: 1.6;
+        }
+
+        p {
+            margin-bottom: 18px;
+            font-size: 1.03rem;
+        }
+
+        strong {
+            font-weight: 600;
+            color: #2d2640;
+        }
+
+        /* SUBTLE DIVIDER */
+        .divider {
+            width: 100%;
+            height: 1px;
+            background: #eee;
+            margin: 26px 0;
+        }
+
+        /* IMAGE BLOCK */
+        .image-wrapper {
+            width: 100%;
+            margin: 14px 0 18px 0; /* more compact */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .image-wrapper img {
+            width: 100%;
+            height: auto;
+            border-radius: 14px;
+            object-fit: cover;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+        }
+
+        .image-caption {
+            margin-top: 10px;
+            font-style: italic;
+            font-size: 0.85rem;
+            color: #6a6473;
+            text-align: center;
+        }
+
+        /* TITLE IMAGE */
+        .title-image-wrapper {
+            width: 100%;
+            margin: 0 0 18px 0; /* slightly reduced */
+            display: flex;
+            justify-content: center;
+        }
+
+        .title-image-wrapper img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+
+        .end-gif-wrapper {
+            margin-top: 10px;
+            width: 100%;
+            display: flex;
+            flex-direction: column; /* stack vertically */
+            align-items: center;    /* center both image + caption */
+        }
+
+        .end-gif-wrapper img {
+            width: 50%;
+            height: auto;
+            border-radius: 14px;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+        }
+
+        .end-gif-wrapper .image-caption {
+            margin-top: 10px;
+            font-style: italic;
+            font-size: 0.85rem;
+            color: #6a6473;
+            text-align: center;
+        }
+.subtle-italic {
+    font-style: italic;
+    font-size: 0.9rem;
+    color: #5a5563; /* optional */
+    text-align: center;
+    display: block; /* needed so text-align works properly */
+}
+.subtle {
+    font-size: 0.9rem;
+    color: #5a5563; /* optional */
+    text-align: center;
+    display: block; /* needed so text-align works properly */
+}
+
+        /* SPECIAL GIFT TITLE */
+        .special-title {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 600;
+            color: #8B4D47;
+            margin-bottom: 16px;
+            letter-spacing: 0.5px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="page">
+                <img src="/static/images/home.svg" alt="home" style="width:56px;height:56px;vertical-align:middle;margin-bottom:18px;cursor:pointer;" onclick="window.location.href='{{ url_for('home') }}'"/>
+        <h2 class="special-title">Ton rire qui sait surtout guérir mes blessures</h2>
+        <audio controls style="width:100%;margin-bottom:18px;">
+            <source src="{{ url_for('static', filename='music/mistral.mp3') }}" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <p class="subtle-italic">Mistral Gagnant - Renault</p>
+        <p class="subtle">I've always loved this song a lot. I love how sad it actually is while sounding so sweet. It's the perfect reflection of how life is often very bitter sweet. Today though, it really made me think about all the positive things about you and us. I would like to say that not even time could erase how good you make me feel, so take that Renault. Time can take your mistral gagnant but not my feelings for my petit wife!
+        </p>
+        
+        <p class="subtle-italic">I really, really hope you enjoy this one. I've been wanting to sing it since the first petit song but it never sounded right. I think it did today and I hope it sounds good to you too.</p>
+            <div class="divider"></div>
+<p class="subtle"style="white-space:pre-wrap;word-break:break-word;">
+Paroles :
+À m'asseoir sur un banc, cinq minutes, avec toi
+Et regarder les gens, tant qu'y en a
+Te parler du bon temps, qui est mort ou qui reviendra
+En serrant dans ma main tes petits doigts
+Pis donner à bouffer à des pigeons idiots
+Leur filer des coups de pied pour de faux
+Et entendre ton rire qui lézarde les murs
+Qui sait surtout guérir mes blessures
+Te raconter un peu comment j'étais, minot
+Les bombecs fabuleux qu'on piquait chez l'marchand
+Car-en-sac et Minto, caramels à un franc
+Et les Mistral Gagnants
+À remarcher sous la pluie, cinq minutes, avec toi
+Et regarder la vie, tant qu'y en a
+Te raconter la Terre en te bouffant des yeux
+Te parler de ta mère, un petit peu
+Et sauter dans les flaques pour la faire râler
+Bousiller nos godasses et s'marrer
+Et entendre ton rire comme on entend la mer
+S'arrêter, repartir en arrière
+Te raconter surtout les Carambars d'antan et les Coco Boers
+Et les vrais Roudoudous qui nous coupaient les lèvres
+Et nous niquaient les dents
+Et les Mistral Gagnants
+À m'asseoir sur un banc, cinq minutes, avec toi
+Regarder le soleil qui s'en va
+Te parler du bon temps, qui est mort et je m'en fous
+Te dire que les méchants, c'est pas nous
+Que si moi je suis barge, ce n'est que de tes yeux
+Car ils ont l'avantage d'être deux
+Et entendre ton rire s'envoler aussi haut
+Que s'envolent les cris des oiseaux
+Te raconter, enfin, qu'il faut aimer la vie
+L'aimer même si le temps est assassin et emporte avec lui
+Les rires des enfants
+Et les Mistral Gagnants
+Et les Mistral Gagnants</p>
+    </div>
+</body>
+</html>

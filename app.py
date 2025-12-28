@@ -35,6 +35,10 @@ def home_week4():
 def home_week5():
 	return render_template("home_week5.html")
 
+@app.route('/home_week6')
+def home_week6():
+     return render_template("home_week6.html")
+
 @app.route('/days_2411')
 def days_2411():
 	return render_template("days_2411.html")
@@ -174,6 +178,10 @@ def special_gift3():
 @app.route('/special_gift4')
 def special_gift4():
     return render_template("special_gift4.html")
+
+@app.route('/special_gift5')
+def special_gift5():
+    return render_template("special_gift5.html")
 
 # @app.route('/memories')
 # def memories():

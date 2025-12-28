@@ -1,0 +1,171 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>Memory App - Home</title>
+
+    <style>
+        /* RESET */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* PAGE BASE */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #faf7f3;
+            color: #3e3a45;
+            display: flex;
+            justify-content: center;
+            padding: 18px 10px; /* reduced margin */
+        }
+
+        /* MAIN CONTAINER */
+        .page {
+            max-width: 780px; /* wider than before */
+            width: 100%;
+            background: #ffffff;
+            padding: 22px 18px; /* slightly tighter */
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            line-height: 1.6;
+        }
+
+        p {
+            margin-bottom: 18px;
+            font-size: 1.03rem;
+        }
+
+        strong {
+            font-weight: 600;
+            color: #2d2640;
+        }
+
+        /* SUBTLE DIVIDER */
+        .divider {
+            width: 100%;
+            height: 1px;
+            background: #eee;
+            margin: 26px 0;
+        }
+
+        /* IMAGE BLOCK */
+        .image-wrapper {
+            width: 100%;
+            margin: 14px 0 18px 0; /* more compact */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .image-wrapper img {
+            width: 100%;
+            height: auto;
+            border-radius: 14px;
+            object-fit: cover;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+        }
+
+        .image-caption {
+            margin-top: 10px;
+            font-style: italic;
+            font-size: 0.85rem;
+            color: #6a6473;
+            text-align: center;
+        }
+
+        /* TITLE IMAGE */
+        .title-image-wrapper {
+            width: 100%;
+            margin: 0 0 18px 0; /* slightly reduced */
+            display: flex;
+            justify-content: center;
+        }
+
+        .title-image-wrapper img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+
+        .end-gif-wrapper {
+            margin-top: 10px;
+            width: 100%;
+            display: flex;
+            flex-direction: column; /* stack vertically */
+            align-items: center;    /* center both image + caption */
+        }
+
+        .end-gif-wrapper img {
+            width: 50%;
+            height: auto;
+            border-radius: 14px;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+        }
+
+        .end-gif-wrapper .image-caption {
+            margin-top: 10px;
+            font-style: italic;
+            font-size: 0.85rem;
+            color: #6a6473;
+            text-align: center;
+        }
+.subtle-italic {
+    font-style: italic;
+    font-size: 0.9rem;
+    color: #5a5563; 
+    text-align: center;
+    display: block; 
+}
+
+
+
+    </style>
+</head>
+
+<body>
+    <div class="page">
+                <img src="/static/images/home.svg" alt="home" style="width:56px;height:56px;vertical-align:middle;margin-bottom:18px;cursor:pointer;" onclick="window.location.href='{{ url_for('home_week6') }}'"/>
+        <div class="image-wrapper">
+            <img src="/static/images/title_2812.png" alt="Title">
+        </div>
+
+<p align="center">
+	Today I wanted to talk about things which haven't happened yet, things I am looking forward to.
+</p>
+		
+<div class="divider"></div>
+
+
+<p>
+When we came back to France, we came back with a plan. The plan is that we'll stay here, work hard to pay our debt and then eventually go back to the Philippines to live there indefinitely. After the first year of putting that plan into action, I can definitely say that I feel closer to it. Money is better, we're almost done paying your last card and my bank should be done next year.
+<br>I believe it's stronger than anyone to feel like you want to already be where you're going. It's natural to want to sort of teleport to where we'll be in two years, getting there without feeling the hard work and the long and painful caress of time. And so, the same way, I wish to be there already, I wish to have already paid everything, with money saved up with Axione and us already being able to take a one way ticket to the philippines.
+<br>But at the same time, I can't deny that I'm enjoying putting that plan in action with you. I enjoy the little victories of us closing a card or having a good uber day. I enjoy the times where we day-dream about something and I enjoy seeing you getting less and less worried about your cards and our situation as time passes. I think it's quite important to feel these moments really strongly so that, when you eventually get there, you know how hard it was and how you can be so proud of what you've achieved.
+</p>
+
+
+
+<p>
+I'm also very much looking forward to when we'll be old together. I can definitely picture us, on a nice pair of fauteuils, reading something or watching something on some Ipads 20 while having some coffee for me and a tea pour toi. We would probably have some biscuits or homemade cake. Our life would be so sweet and tender. I bet we will take even better care of each other despite the old age.
+<br>Just as it is for our plan, I can't wait to be there with you. I want to be there already and look back at our life together, being proud that we were happy. But I also know that I'll enjoy every second of our life together. And I also know that we will love each other more through the pain we'll feel and the joy we'll share.
+<br>I know that I'm very scared of the end of life but I also know that, when we'll be there together, holding hands, I will be calm, sure that I lived my life the right way. Sure that I made the right decision sharing all my years with you for all the laughter and the lack of regrets. I know that, strong from all the years spent together, my mind will be at ease when we'll be at the end together. I know I'll be able to say "We're finally here and I'm glad we took our time after all". 
+</p>
+
+
+<div class="end-gif-wrapper">
+    <img src="/static/images/horizon.gif" alt="cuddle">
+    <p class="image-caption"> Let's look forward to these moments while taking our time to get there.
+    </p>
+</div>
+
+
+
+
+    </div>
+</body>
+</html>
