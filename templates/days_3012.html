@@ -1,0 +1,176 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>Memory App - Home</title>
+
+    <style>
+        /* RESET */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* PAGE BASE */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #faf7f3;
+            color: #3e3a45;
+            display: flex;
+            justify-content: center;
+            padding: 18px 10px; /* reduced margin */
+        }
+
+        /* MAIN CONTAINER */
+        .page {
+            max-width: 780px; /* wider than before */
+            width: 100%;
+            background: #ffffff;
+            padding: 22px 18px; /* slightly tighter */
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            line-height: 1.6;
+        }
+
+        p {
+            margin-bottom: 18px;
+            font-size: 1.03rem;
+        }
+
+        strong {
+            font-weight: 600;
+            color: #2d2640;
+        }
+
+        /* SUBTLE DIVIDER */
+        .divider {
+            width: 100%;
+            height: 1px;
+            background: #eee;
+            margin: 26px 0;
+        }
+
+        /* IMAGE BLOCK */
+        .image-wrapper {
+            width: 100%;
+            margin: 14px 0 18px 0; /* more compact */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .image-wrapper img {
+            width: 100%;
+            height: auto;
+            border-radius: 14px;
+            object-fit: cover;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+        }
+
+        .image-caption {
+            margin-top: 10px;
+            font-style: italic;
+            font-size: 0.85rem;
+            color: #6a6473;
+            text-align: center;
+        }
+
+        /* TITLE IMAGE */
+        .title-image-wrapper {
+            width: 100%;
+            margin: 0 0 18px 0; /* slightly reduced */
+            display: flex;
+            justify-content: center;
+        }
+
+        .title-image-wrapper img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+
+        .end-gif-wrapper {
+            margin-top: 10px;
+            width: 100%;
+            display: flex;
+            flex-direction: column; /* stack vertically */
+            align-items: center;    /* center both image + caption */
+        }
+
+        .end-gif-wrapper img {
+            width: 50%;
+            height: auto;
+            border-radius: 14px;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+        }
+
+        .end-gif-wrapper .image-caption {
+            margin-top: 10px;
+            font-style: italic;
+            font-size: 0.85rem;
+            color: #6a6473;
+            text-align: center;
+        }
+.subtle-italic {
+    font-style: italic;
+    font-size: 0.9rem;
+    color: #5a5563; 
+    text-align: center;
+    display: block; 
+}
+
+
+
+    </style>
+</head>
+
+<body>
+    <div class="page">
+                <img src="/static/images/home.svg" alt="home" style="width:56px;height:56px;vertical-align:middle;margin-bottom:18px;cursor:pointer;" onclick="window.location.href='{{ url_for('home_week6') }}'"/>
+        <div class="image-wrapper">
+            <img src="/static/images/title_3012.png" alt="Title">
+        </div>
+
+<p align="center">
+	Today I decided to dive into a little "data analysis" of our messages and interpret what it really means.
+</p>
+		
+<div class="divider"></div>
+
+
+<p>
+ From the moment telegram was reset by accident to november 2025, we shared a total of 119 514 messages. At first I thought it wasn't sounding like so much. But then I realized that, if we average it per day, which is already quite wrong to do because of a long while of that time frame we were physically together that's 365 days times 3 years so about 1095 days which equals an average of 109 messages per day. Considering that we were physically together for about 2 years total of these 3, we can definitely adjust the calculation to end up to the crazy number of 327 messages per day. Now that sounds like an absolute crazy amount and I was quite surprised to find this out.
+
+</p>
+
+
+
+<p>
+But it's not even the craziest part... I calculated the total number of characters in our messages. For reference a character is a letter like "a", a number, a space or an emoji. Our messages count a total of 5 million 290 thousand and 523 charactes. 5.3 millions if rounded up. Now that really impressed me and that was only the beginning. 
+<br>I had the idea to look up how much that would equate in pages and the estimation is about 20 000 A4 pages. Now imagine that we wrote, together, more than 6 times the length of all the Harry Potter books. It made me realize that we really did wrote our own story together, making sure it was as detailed as possible, taking the time to write every single word to tell the other one everything we had at heart. 
+<br>Looking ahead, it seems totally impossible to write more than that but I'm quite sure that with the little time spent appart with you in the PH we wrote at least a thousand pages more.
+<br>I'd also like to put into perspective all of this and talk about the data we don't have. We do not have the amount of time spent talking over the phone and that probably equates to a few thousand pages more with all the time we spent on the phone when we first met.
+</p>
+
+<p>Also, I wanted to count the number of messages including "je t'aime" or "I love you" and I found out it was 4168. It means that, only in text, we said je t'aime to each other more than 4000 times. I find that very sweet considering we've "only" been together for a bit less than 4 years, so about 1000 days. 
+<br>Finally, I wanted to count the number of days for which I have data on telegram. 1030 days. Considering that we've been together for less than 4 years, it's safe to say that we talked everyday on telegram ever since.
+<br>I find that fact to be a pretty clear evidence of how we experience our love. We cannot spend a day without each other and it seems like we have to stay in contact everyday to be okay. I definitely know that, especially being apart, I wouldn't be able to not text you to get to know what you were up to and to know that you're safe. I have this need to always know that you're safe and that I have the insurance that my petit wife is not in a bad situation or being scared of anything. 
+<br>For me, texting everyday so intensly, is normal if you love your partner and want to know everything about them and their life. I wouldn't trade the way we communicate for anything else in the world ma chérie.</p>
+
+
+<div class="end-gif-wrapper">
+    <img src="/static/images/gomaglasses.jpg" alt="cuddle">
+    <p class="image-caption"> Look at how he's trying to explain something to her like this data thing and she's just playing with a petit mushroom. That's really us.
+    </p>
+</div>
+
+
+
+
+    </div>
+</body>
+</html>
