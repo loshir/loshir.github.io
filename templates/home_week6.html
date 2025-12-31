@@ -117,7 +117,7 @@
         .calendar h2 {
             font-size: 1.5rem;
             color: #4a4255; /* 60% Neutral */
-            margin-bottom: 0.5rem;
+            margin-bottom: 1rem;
             font-weight: 700;
             text-align: center;
         }
@@ -228,11 +228,11 @@
 
         <div class="calendar">
             <h2>Last week!</h2>
-            <h3>Claim all the rewards for a special gift!</h3>
+            <p></p>
             <ul class="calendar-week">
                 <li><a href="{{ url_for('days_2912')}}" class="calendar-day" data-date="2025-12-29">29</a></li>
                 <li><a href="{{ url_for('days_3012')}}" class="calendar-day" data-date="2025-12-30">30</a></li>
-                <li><a class="calendar-day" data-date="2025-12-31">31</a></li>
+                <li><a href="{{ url_for('days_3112')}}" class="calendar-day" data-date="2025-12-31">31</a></li>
 
             </ul>
         </div>
